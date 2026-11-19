@@ -17,7 +17,6 @@
     const iframe = document.createElement('iframe');
     const params = new URLSearchParams({
       autoplay: '1',
-      mute: '1',
       playsinline: '1',
       controls: '1',
       rel: '0',
@@ -46,11 +45,14 @@
   };
 
   // Pengunjung yang masih dalam masa 6 jam melewati Welcome Screen.
-  // Video tetap dicoba diputar otomatis dalam keadaan mute.
+  // Browser dapat memblokir autoplay bersuara jika tidak ada interaksi baru.
   if (welcome && welcome.classList.contains('is-hidden')) {
     loadYouTubeVideo();
   }
 
   // Pengunjung baru memuat video setelah menekan tombol Masuk.
+  // Karena iframe dibuat langsung dari rangkaian klik tersebut, browser
+  // berkesempatan mengizinkan autoplay dengan suara. Kebijakan browser
+  // tetap menentukan apakah autoplay bersuara benar-benar diizinkan.
   window.addEventListener('website:entered', loadYouTubeVideo);
 })();

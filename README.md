@@ -78,3 +78,10 @@ Setiap navigasi internal antarhalaman menampilkan skeleton loading singkat sebel
 - Autoplay dicoba dalam keadaan mute karena browser umumnya membatasi autoplay dengan suara.
 - Pengunjung dapat mengaktifkan suara melalui kontrol pemutar YouTube.
 - Video tetap responsif dengan rasio 16:9 dan tidak memerlukan file MP4 di `assets/video/`.
+
+
+## Pengaturan autoplay video dengan suara (v0.8)
+- Parameter mute dihapus agar pemutar YouTube mencoba memulai dengan suara aktif.
+- Iframe dimuat setelah tombol Masuk ditekan pada Welcome Screen.
+- Browser tetap dapat membatasi autoplay bersuara. Jika diblokir, pengunjung perlu menekan tombol putar atau kontrol suara pada pemutar.
+- Pada kunjungan yang melewati Welcome Screen secara otomatis (misalnya masih dalam jangka 6 jam), browser mungkin tidak mengizinkan autoplay bersuara karena tidak ada interaksi baru.
