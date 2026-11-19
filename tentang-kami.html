@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#007934"><meta name="description" content="Profil dan kontribusi anggota Kelompok 6, PAI 1D."><title>Tentang Kami | Etika Digital - Kelompok 6</title><script>
+  try {
+    if (sessionStorage.getItem('pai1dPageTransition') === '1') {
+      document.documentElement.classList.add('page-transition-in');
+      sessionStorage.removeItem('pai1dPageTransition');
+    }
+  } catch (error) {}
+</script>
+
+<script>
+/* Deteksi awal Welcome Screen sebelum halaman dirender agar tidak berkedip. */
+(function () {
+  var SIX_HOURS = 6 * 60 * 60 * 1000;
+  var LOCAL_KEY = 'pai1dEtikaDigitalLastVisit';
+  var SESSION_KEY = 'pai1dEtikaDigitalLastActivityInTab';
+  var WINDOW_TOKEN = '__PAI1D_WELCOME_LAST_ACTIVITY__=';
+
+  function readStorage(storage, key) {
+    try { return Number(storage.getItem(key) || 0); }
+    catch (error) { return 0; }
+  }
+
+  function readWindowTime() {
+    try {
+      var match = String(window.name || '').match(/(?:^|;)__PAI1D_WELCOME_LAST_ACTIVITY__=(\d+)/);
+      return match ? Number(match[1]) : 0;
+    } catch (error) { return 0; }
+  }
+
+  var last = Math.max(
+    readStorage(window.localStorage, LOCAL_KEY),
+    readStorage(window.sessionStorage, SESSION_KEY),
+    readWindowTime()
+  );
+  var recent = last > 0 && Date.now() >= last && Date.now() - last < SIX_HOURS;
+
+  if (recent) document.documentElement.classList.add('welcome-suppressed');
+})();
+</script>
+
+<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/responsive.css"><script src="js/main.js" defer></script><script src="js/welcome.js" defer></script></head>
+<body data-page="tentang">
+<div class="page-loader" id="pageLoader" aria-hidden="true">
+  <div class="skeleton-shell">
+    <div class="skeleton-header" aria-hidden="true">
+      <div class="skeleton-brand"><span class="skeleton-block skeleton-logo"></span><span class="skeleton-block skeleton-brand-name"></span></div>
+      <div class="skeleton-nav"><span class="skeleton-block"></span><span class="skeleton-block"></span><span class="skeleton-block"></span><span class="skeleton-block"></span></div>
+    </div>
+    <div class="skeleton-content" aria-hidden="true">
+      <span class="skeleton-block skeleton-eyebrow"></span>
+      <span class="skeleton-block skeleton-title"></span>
+      <span class="skeleton-block skeleton-title skeleton-title-short"></span>
+      <span class="skeleton-block skeleton-copy skeleton-copy-wide"></span>
+      <span class="skeleton-block skeleton-copy"></span>
+      <div class="skeleton-cards">
+        <div class="skeleton-card"><span class="skeleton-block skeleton-card-icon"></span><span class="skeleton-block skeleton-card-title"></span><span class="skeleton-block skeleton-card-line"></span><span class="skeleton-block skeleton-card-line skeleton-card-line-short"></span></div>
+        <div class="skeleton-card"><span class="skeleton-block skeleton-card-icon"></span><span class="skeleton-block skeleton-card-title"></span><span class="skeleton-block skeleton-card-line"></span><span class="skeleton-block skeleton-card-line skeleton-card-line-short"></span></div>
+        <div class="skeleton-card"><span class="skeleton-block skeleton-card-icon"></span><span class="skeleton-block skeleton-card-title"></span><span class="skeleton-block skeleton-card-line"></span><span class="skeleton-block skeleton-card-line skeleton-card-line-short"></span></div>
+      </div>
+    </div>
+    <span class="skeleton-sr-only">Memuat halaman berikutnya…</span>
+  </div>
+</div>
+<div class="welcome-screen" id="welcomeScreen" aria-labelledby="welcomeTitle" aria-modal="true" role="dialog">
+      <div class="welcome-panel">
+        <img class="welcome-logo" src="assets/foto/logo%20pai1d.png" alt="Logo PAI 1D" onerror="this.classList.add('logo-missing')">
+        <span class="eyebrow">MEDIA PEMBELAJARAN · KELOMPOK 6 · PAI 1D</span>
+        <h1 id="welcomeTitle">Etika di Era<br><span>Teknologi Informasi</span></h1>
+        <p class="welcome-description">Menjelajahi teknologi dengan pengetahuan, etika, dan tanggung jawab.</p>
+        <button class="button button-primary welcome-enter" id="enterWebsite" type="button">Masuk ke Website <span aria-hidden="true">→</span></button>
+        <p class="welcome-footnote">UIN Siber Syekh Nurjati Cirebon</p>
+      </div>
+    </div><header class="site-header">
+      <a class="brand" href="index.html" aria-label="Beranda Etika Digital">
+        <img class="brand-logo" src="assets/foto/logo%20pai1d.png" alt="Logo PAI 1D" onerror="this.classList.add('logo-missing')">
+        <span class="brand-name">Etika Digital</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Buka navigasi" aria-expanded="false" aria-controls="mainNav"><span></span><span></span><span></span></button>
+      <nav class="main-nav" id="mainNav" aria-label="Navigasi utama"><a class="nav-link " href="index.html">Beranda</a><a class="nav-link " href="cyberethics.html">Cyberethics</a><a class="nav-link " href="prinsip-etika.html">Prinsip Etika</a><a class="nav-link " href="perkembangan-cyberspace.html">Perkembangan</a><a class="nav-link " href="real-space-cyber-space.html">Real = Cyber</a><a class="nav-link " href="kasus-kesimpulan.html">Kasus & Kesimpulan</a><a class="nav-link active" href="tentang-kami.html">Tentang Kami</a></nav>
+    </header>
+<main class="about-main section-wrap"><div class="about-hero"><span class="eyebrow">DI BALIK WEBSITE INI · KELOMPOK 6</span><h1>Tentang Kami</h1><p>Website ini dikembangkan sebagai media pembelajaran mengenai etika di era teknologi informasi oleh Kelompok 6, PAI 1D, UIN Siber Syekh Nurjati Cirebon.</p></div>
+<section class="about-purpose"><div class="purpose-icon">✦</div><div><h2>Belajar dan berbagi pemahaman</h2><p>Website ini menyajikan materi secara terstruktur, dengan penjelasan yang lebih lengkap daripada ringkasan slide. Materi utama mengikuti PDF Pertemuan 06 dan dilengkapi sumber akademik, kode etik profesi, peraturan resmi, serta contoh kasus yang relevan. Setiap subbab diakhiri kesimpulan agar gagasan utama lebih mudah dipahami.</p></div></section>
+<section class="members-section"><div class="section-heading left-heading"><span class="eyebrow">TIM PENGEMBANG</span><h2>Lima anggota Kelompok 6</h2><p>Berikut nama, NIM, dan pembagian kontribusi anggota Kelompok 6 dalam pengembangan website.</p></div>
+<div class="member-grid"><article class="member-card"><div class="member-avatar">01</div><div class="member-info"><span class="member-role">ANGGOTA 1</span><h3>Fakhri Ahmad Alfanani</h3><p class="member-id">NIM: 26301010152</p><p class="member-contribution">Kontribusi: Membuat Beranda, merancang desain website, menggabungkan halaman, melakukan pengujian, dan publikasi.</p></div></article><article class="member-card"><div class="member-avatar">02</div><div class="member-info"><span class="member-role">ANGGOTA 2</span><h3>Nida Azkia</h3><p class="member-id">NIM: 26301010045</p><p class="member-contribution">Kontribusi: Membuat halaman Cyberethics dan menyusun materi pendukung.</p></div></article><article class="member-card"><div class="member-avatar">03</div><div class="member-info"><span class="member-role">ANGGOTA 3</span><h3>Raisa Iztania Balqis</h3><p class="member-id">NIM: 26301010131</p><p class="member-contribution">Kontribusi: Membuat halaman Prinsip dan Dimensi Etika Digital.</p></div></article><article class="member-card"><div class="member-avatar">04</div><div class="member-info"><span class="member-role">ANGGOTA 4</span><h3>Risma Komala</h3><p class="member-id">NIM: 26301010030</p><p class="member-contribution">Kontribusi: Membuat halaman Perkembangan Cyberspace.</p></div></article><article class="member-card"><div class="member-avatar">05</div><div class="member-info"><span class="member-role">ANGGOTA 5</span><h3>Siti Zahrotul Amelia</h3><p class="member-id">NIM: 26301010226</p><p class="member-contribution">Kontribusi: Membuat halaman Real Space = Cyber Space.</p></div></article></div></section>
+<section class="contribution-note"><h2>Dikembangkan secara kolaboratif</h2><p>Halaman Kasus dan Penanganan, Kesimpulan, serta Tentang Kami dikembangkan melalui kerja sama seluruh anggota Kelompok 6.</p></section>
+</main><footer class="site-footer">
+      <div class="footer-main">
+        <div class="footer-brand-block"><span class="footer-mark">ED</span><div><strong>Etika di Era Teknologi Informasi</strong><p>Media pembelajaran · Kelompok 6 · PAI 1D</p></div></div>
+        <div class="footer-campus">UIN Siber Syekh Nurjati Cirebon</div>
+        <a class="footer-about-link" href="tentang-kami.html">Tentang pengembang <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="footer-bottom"><span>© 2026 Kelompok 6. Hak cipta konten dan pengembangan website dimiliki bersama oleh kelompok.</span><span>Gunakan teknologi secara bijak dan bertanggung jawab.</span></div>
+    </footer><button class="back-to-top" id="backToTop" type="button" aria-label="Kembali ke atas" title="Kembali ke atas"><span aria-hidden="true">↑</span></button></body></html>

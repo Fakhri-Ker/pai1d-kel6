@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#007934"><meta name="description" content="Cyberspace atau ruang siber tumbuh dari perkembangan perangkat, jaringan, aplikasi, dan konten digital. Perkembangannya mengubah cara masyarakat berkomunikasi, memperoleh informasi, bertransaksi, belajar, dan membangun hubungan sosial."><title>Perkembangan Cyberspace | Etika Digital - Kelompok 6</title><script>
+  try {
+    if (sessionStorage.getItem('pai1dPageTransition') === '1') {
+      document.documentElement.classList.add('page-transition-in');
+      sessionStorage.removeItem('pai1dPageTransition');
+    }
+  } catch (error) {}
+</script>
+
+<script>
+/* Deteksi awal Welcome Screen sebelum halaman dirender agar tidak berkedip. */
+(function () {
+  var SIX_HOURS = 6 * 60 * 60 * 1000;
+  var LOCAL_KEY = 'pai1dEtikaDigitalLastVisit';
+  var SESSION_KEY = 'pai1dEtikaDigitalLastActivityInTab';
+  var WINDOW_TOKEN = '__PAI1D_WELCOME_LAST_ACTIVITY__=';
+
+  function readStorage(storage, key) {
+    try { return Number(storage.getItem(key) || 0); }
+    catch (error) { return 0; }
+  }
+
+  function readWindowTime() {
+    try {
+      var match = String(window.name || '').match(/(?:^|;)__PAI1D_WELCOME_LAST_ACTIVITY__=(\d+)/);
+      return match ? Number(match[1]) : 0;
+    } catch (error) { return 0; }
+  }
+
+  var last = Math.max(
+    readStorage(window.localStorage, LOCAL_KEY),
+    readStorage(window.sessionStorage, SESSION_KEY),
+    readWindowTime()
+  );
+  var recent = last > 0 && Date.now() >= last && Date.now() - last < SIX_HOURS;
+
+  if (recent) document.documentElement.classList.add('welcome-suppressed');
+})();
+</script>
+
+<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/responsive.css"><script src="js/main.js" defer></script><script src="js/welcome.js" defer></script></head>
+<body data-page="perkembangan">
+<div class="page-loader" id="pageLoader" aria-hidden="true">
+  <div class="skeleton-shell">
+    <div class="skeleton-header" aria-hidden="true">
+      <div class="skeleton-brand"><span class="skeleton-block skeleton-logo"></span><span class="skeleton-block skeleton-brand-name"></span></div>
+      <div class="skeleton-nav"><span class="skeleton-block"></span><span class="skeleton-block"></span><span class="skeleton-block"></span><span class="skeleton-block"></span></div>
+    </div>
+    <div class="skeleton-content" aria-hidden="true">
+      <span class="skeleton-block skeleton-eyebrow"></span>
+      <span class="skeleton-block skeleton-title"></span>
+      <span class="skeleton-block skeleton-title skeleton-title-short"></span>
+      <span class="skeleton-block skeleton-copy skeleton-copy-wide"></span>
+      <span class="skeleton-block skeleton-copy"></span>
+      <div class="skeleton-cards">
+        <div class="skeleton-card"><span class="skeleton-block skeleton-card-icon"></span><span class="skeleton-block skeleton-card-title"></span><span class="skeleton-block skeleton-card-line"></span><span class="skeleton-block skeleton-card-line skeleton-card-line-short"></span></div>
+        <div class="skeleton-card"><span class="skeleton-block skeleton-card-icon"></span><span class="skeleton-block skeleton-card-title"></span><span class="skeleton-block skeleton-card-line"></span><span class="skeleton-block skeleton-card-line skeleton-card-line-short"></span></div>
+        <div class="skeleton-card"><span class="skeleton-block skeleton-card-icon"></span><span class="skeleton-block skeleton-card-title"></span><span class="skeleton-block skeleton-card-line"></span><span class="skeleton-block skeleton-card-line skeleton-card-line-short"></span></div>
+      </div>
+    </div>
+    <span class="skeleton-sr-only">Memuat halaman berikutnya…</span>
+  </div>
+</div>
+<div class="welcome-screen" id="welcomeScreen" aria-labelledby="welcomeTitle" aria-modal="true" role="dialog">
+      <div class="welcome-panel">
+        <img class="welcome-logo" src="assets/foto/logo%20pai1d.png" alt="Logo PAI 1D" onerror="this.classList.add('logo-missing')">
+        <span class="eyebrow">MEDIA PEMBELAJARAN · KELOMPOK 6 · PAI 1D</span>
+        <h1 id="welcomeTitle">Etika di Era<br><span>Teknologi Informasi</span></h1>
+        <p class="welcome-description">Menjelajahi teknologi dengan pengetahuan, etika, dan tanggung jawab.</p>
+        <button class="button button-primary welcome-enter" id="enterWebsite" type="button">Masuk ke Website <span aria-hidden="true">→</span></button>
+        <p class="welcome-footnote">UIN Siber Syekh Nurjati Cirebon</p>
+      </div>
+    </div><header class="site-header">
+      <a class="brand" href="index.html" aria-label="Beranda Etika Digital">
+        <img class="brand-logo" src="assets/foto/logo%20pai1d.png" alt="Logo PAI 1D" onerror="this.classList.add('logo-missing')">
+        <span class="brand-name">Etika Digital</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Buka navigasi" aria-expanded="false" aria-controls="mainNav"><span></span><span></span><span></span></button>
+      <nav class="main-nav" id="mainNav" aria-label="Navigasi utama"><a class="nav-link " href="index.html">Beranda</a><a class="nav-link " href="cyberethics.html">Cyberethics</a><a class="nav-link " href="prinsip-etika.html">Prinsip Etika</a><a class="nav-link active" href="perkembangan-cyberspace.html">Perkembangan</a><a class="nav-link " href="real-space-cyber-space.html">Real = Cyber</a><a class="nav-link " href="kasus-kesimpulan.html">Kasus & Kesimpulan</a><a class="nav-link " href="tentang-kami.html">Tentang Kami</a></nav>
+    </header>
+<main class="article-main section-wrap">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Beranda</a><span>/</span><span>Perkembangan Cyberspace</span></nav>
+  <header class="article-hero"><span class="eyebrow">MATERI 03 · ETIKA DI ERA TEKNOLOGI INFORMASI · KELOMPOK 6</span><h1>Perkembangan Cyberspace</h1><h2>Dari perubahan teknologi menuju transformasi kehidupan sosial</h2><p>Cyberspace atau ruang siber tumbuh dari perkembangan perangkat, jaringan, aplikasi, dan konten digital. Perkembangannya mengubah cara masyarakat berkomunikasi, memperoleh informasi, bertransaksi, belajar, dan membangun hubungan sosial.</p></header>
+  <aside class="article-callout"><span class="callout-mark">✦</span><div><strong>Tujuan pembelajaran</strong><p>Menjelaskan perubahan masyarakat dari era agraris dan industri menuju masyarakat informasi, unsur pembentuk cyberspace, serta dampak transformasi sosial-budaya dan tren teknologi.</p><p class="callout-subtext">Pembahasan mengikuti susunan PDF Pertemuan 06 dan dilengkapi rujukan akademik, kode etik profesi, serta peraturan resmi yang relevan.</p></div></aside>
+  <div class="article-layout"><aside class="toc"><strong>Dalam halaman ini</strong><ol><li><a href="#bagian-1">Perubahan masyarakat dan gelombang teknologi</a></li><li><a href="#bagian-2">Unsur pembentuk cyberspace: akses, jaringan, aplikasi, dan konten</a></li><li><a href="#bagian-3">Transformasi sosial-budaya dan aktivitas masyarakat</a></li><li><a href="#bagian-4">Tren teknologi yang memperbesar kebutuhan etika</a></li></ol><div class="toc-note">Setiap subbab diakhiri kesimpulan singkat untuk menegaskan inti pembahasan.</div></aside><div class="article-content"><section class="article-section" id="bagian-1">
+      <span class="section-index">01</span>
+      <div class="article-section-body">
+        <h2>Perubahan masyarakat dan gelombang teknologi</h2>
+        
+        <p>PDF Pertemuan 06 menggambarkan perubahan masyarakat melalui beberapa gelombang teknologi. Masyarakat agraris sangat bergantung pada kegiatan pertanian dan sumber daya alam. Revolusi industri memperluas penggunaan mesin, pabrik, dan produksi berskala besar. Berikutnya, perkembangan komputer, telekomunikasi, dan jaringan digital mendorong masyarakat informasi, yaitu masyarakat yang semakin bergantung pada penciptaan, pengolahan, penyimpanan, dan pertukaran informasi.</p>
+        <p>Dalam garis waktu pada halaman 16, bahan kuliah menempatkan mesin uap, telepon, televisi, komputer, dan revolusi digital sebagai penanda perubahan teknologi. Perubahan ini tidak terjadi secara terpisah. Teknologi baru tumbuh di atas infrastruktur dan kebiasaan yang telah ada, lalu mengubah kecepatan dan jangkauan aktivitas manusia. Perkembangan dari elektronik analog ke digital juga membuat informasi lebih mudah disimpan, disalin, diproses, dan dikirimkan.</p>
+        <p>Istilah <em>real space</em> dan <em>cyber space</em> dalam materi membantu membedakan ruang fisik dengan ruang yang dimediasi jaringan digital. Namun, keduanya saling terhubung. Aktivitas digital membutuhkan perangkat dan infrastruktur nyata, sementara hasil interaksi di ruang siber dapat memengaruhi pekerjaan, ekonomi, hubungan sosial, dan keputusan di dunia fisik.</p>
+        <p>Karena itu, perkembangan cyberspace bukan sekadar cerita tentang perangkat yang semakin canggih. Perkembangan ini juga merupakan perubahan cara masyarakat mengorganisasi aktivitas dan hubungan, sehingga nilai, regulasi, dan kebiasaan sosial perlu menyesuaikan diri.</p>
+      
+        <p class="source-note">Dasar materi: PDF Pertemuan 06, halaman 16. · Pengayaan: Laudon & Laudon</p>
+        <div class="subsection-conclusion"><span class="conclusion-label">KESIMPULAN SUBBAB</span><p>Perkembangan dari masyarakat agraris, industri, hingga masyarakat informasi memperlihatkan bahwa teknologi mengubah cara manusia bekerja dan berhubungan. Cyberspace tumbuh dari perubahan tersebut dan tetap terhubung dengan kehidupan nyata.</p></div>
+      </div>
+    </section><section class="article-section" id="bagian-2">
+      <span class="section-index">02</span>
+      <div class="article-section-body">
+        <h2>Unsur pembentuk cyberspace: akses, jaringan, aplikasi, dan konten</h2>
+        
+        <p>Diagram pada halaman 17 merangkum empat unsur yang saling melengkapi dalam pembentukan cyberspace: <strong>akses, jaringan, aplikasi, dan konten</strong>. Akses merujuk pada perangkat atau sarana yang digunakan seseorang untuk terhubung, seperti komputer pribadi, telepon seluler, televisi digital, konsol permainan, dan perangkat bergerak lainnya. Tanpa perangkat akses, pengguna tidak dapat memanfaatkan layanan digital.</p>
+        <p>Jaringan menghubungkan perangkat dan memungkinkan data berpindah. Dalam diagram, contoh teknologi jaringan mencakup kabel, DSL, jaringan seluler generasi awal, satelit, PLC, nirkabel, dan serat optik. Teknologi jaringan terus berkembang, tetapi fungsi dasarnya tetap sama: menyediakan jalur komunikasi agar perangkat dan layanan dapat saling bertukar data.</p>
+        <p>Aplikasi dan konten merupakan bagian yang paling dekat dengan pengalaman pengguna. Aplikasi menyediakan fungsi, sedangkan konten menyediakan informasi atau layanan yang diakses melalui fungsi tersebut. Contohnya meliputi komunikasi, pendidikan, musik, film, layanan keuangan, perdagangan elektronik, permainan, dan layanan konektivitas. Perkembangan aplikasi mengubah jaringan dari sekadar sarana komunikasi menjadi ruang untuk menjalankan banyak aktivitas.</p>
+        <p>Keempat unsur tersebut saling bergantung. Perangkat yang canggih tidak banyak berguna tanpa jaringan; jaringan tanpa aplikasi belum tentu memberi manfaat langsung; dan aplikasi tanpa konten yang relevan tidak memenuhi kebutuhan pengguna. Oleh karena itu, gangguan keamanan atau penyalahgunaan pada satu unsur dapat memengaruhi unsur lain dan berdampak pada pengguna yang lebih luas.</p>
+      
+        <p class="source-note">Dasar materi: PDF Pertemuan 06, halaman 17. · Pengayaan: Laudon & Laudon</p>
+        <div class="subsection-conclusion"><span class="conclusion-label">KESIMPULAN SUBBAB</span><p>Cyberspace terbentuk dari keterhubungan akses, jaringan, aplikasi, dan konten. Keempat unsur itu saling bergantung; perubahan atau gangguan pada satu unsur dapat memengaruhi pengalaman serta keamanan pengguna di ruang digital.</p></div>
+      </div>
+    </section><section class="article-section" id="bagian-3">
+      <span class="section-index">03</span>
+      <div class="article-section-body">
+        <h2>Transformasi sosial-budaya dan aktivitas masyarakat</h2>
+        
+        <p>Ketika teknologi digital digunakan secara luas, perubahan tidak hanya terjadi pada alat yang dipakai, tetapi juga pada nilai, regulasi, pembangunan, dan aktivitas masyarakat. PDF menyebut transformasi nilai budaya, sosial, etika, dan pengetahuan, serta perubahan dalam cara transaksi dan pelayanan dilakukan.</p>
+        <p>Contoh yang ditampilkan dalam bahan kuliah adalah perdagangan menjadi <em>e-commerce</em>, perbankan menjadi <em>e-banking</em>, layanan notaris berkembang menuju konsep <em>cyber notary</em>, dan pemungutan suara dapat dilakukan melalui <em>e-voting</em>. Contoh-contoh tersebut menunjukkan bahwa aktivitas yang sebelumnya membutuhkan pertemuan atau dokumen fisik dapat didukung oleh sistem elektronik. Meskipun demikian, perpindahan ke sistem digital tetap membutuhkan kejelasan identitas, keamanan transaksi, perlindungan data, akses yang adil, dan mekanisme penyelesaian masalah.</p>
+        <p>Transformasi juga memengaruhi hubungan sosial. Komunikasi menjadi lebih cepat dan dapat berlangsung lintas wilayah, tetapi pesan yang salah atau konten yang merugikan juga dapat menyebar lebih cepat. Aktivitas ekonomi menjadi lebih mudah dijangkau, tetapi konsumen perlu memastikan keaslian penjual dan transaksi. Pembelajaran dapat dilakukan dari jarak jauh, tetapi pengguna perlu memilah sumber informasi dan menjaga integritas akademik.</p>
+        <p>Artinya, transformasi digital bukan sekadar mengganti kegiatan luring dengan layanan daring. Perubahan tersebut mengubah proses, kebiasaan, ekspektasi, dan risiko. Etika diperlukan agar kemudahan baru tetap memperhatikan kepentingan manusia dan masyarakat.</p>
+      
+        <p class="source-note">Dasar materi: PDF Pertemuan 06, halaman 18. · Pengayaan: <a href="https://www.acm.org/code-of-ethics" target="_blank" rel="noopener noreferrer">ACM</a>, <a href="https://peraturan.bpk.go.id/Details/229798/uu-no-27-" target="_blank" rel="noopener noreferrer">UU PDP 2022</a>, <a href="https://peraturan.bpk.go.id/Details/274494/uu-no-1-tahun-2024" target="_blank" rel="noopener noreferrer">UU ITE 2024</a></p>
+        <div class="subsection-conclusion"><span class="conclusion-label">KESIMPULAN SUBBAB</span><p>Transformasi digital mengubah cara masyarakat berdagang, bertransaksi, belajar, berkomunikasi, dan menggunakan layanan publik. Perubahan tersebut perlu disertai aturan, perlindungan, dan perilaku etis agar manfaat teknologi tidak mengorbankan hak masyarakat.</p></div>
+      </div>
+    </section><section class="article-section" id="bagian-4">
+      <span class="section-index">04</span>
+      <div class="article-section-body">
+        <h2>Tren teknologi yang memperbesar kebutuhan etika</h2>
+        
+        <p>Halaman 14 PDF mengidentifikasi beberapa tren yang membuat persoalan etika semakin penting. Pertama, peningkatan kemampuan komputasi membuat semakin banyak organisasi bergantung pada komputer dan sistem informasi. Slide mengutip <em>Moore’s law</em> sebagai gambaran historis peningkatan kepadatan atau kemampuan chip. Angka waktu penggandaan pada slide sebaiknya dipahami sebagai ilustrasi tren pada masa tertentu, bukan jaminan bahwa semua prosesor selalu meningkat dengan laju yang sama.</p>
+        <p>Kedua, biaya penyimpanan yang semakin terjangkau memungkinkan individu dan organisasi menyimpan data dalam jumlah besar. Layanan cloud juga membuat data dapat diakses tanpa harus selalu berada pada satu perangkat lokal. Kemudahan ini bermanfaat, tetapi memperbesar kebutuhan untuk mengatur akses, keamanan, retensi, dan penghapusan data.</p>
+        <p>Ketiga, kemajuan jaringan dan internet memudahkan pemindahan data pribadi maupun data organisasi dari lokasi yang berjauhan. Kecepatan dan jangkauan tersebut mendukung kolaborasi, namun kesalahan konfigurasi atau akses tanpa izin juga dapat menimbulkan dampak yang luas.</p>
+        <p>Keempat, teknik analisis data atau <em>data mining</em> memungkinkan data dari banyak sumber digabungkan untuk menemukan pola. <em>Profiling</em> menyusun gambaran mengenai individu dari kumpulan data, sedangkan <em>Non-obvious Relationship Awareness</em> (NORA) dalam slide dijelaskan sebagai penggabungan berbagai sumber untuk mencari hubungan tersembunyi, misalnya untuk membantu identifikasi kriminal atau terorisme. Penggunaan seperti ini harus memperhatikan akurasi, proporsionalitas, tujuan, privasi, dan kemungkinan salah mengidentifikasi seseorang.</p>
+        <p>Angka pertumbuhan pengguna internet yang tercantum pada halaman 24 PDF berasal dari sumber tahun 2011–2012. Angka tersebut merupakan data historis untuk menunjukkan pesatnya pertumbuhan internet pada masa itu, bukan statistik terkini. Dalam materi ini, yang dipertahankan adalah pelajaran utamanya: semakin banyak orang dan pelaku usaha beraktivitas di dunia maya, semakin besar pula dampak sosial dan ekonominya.</p>
+      
+        <p class="source-note">Dasar materi: PDF Pertemuan 06, halaman 14 dan 24. · Pengayaan: <a href="https://peraturan.bpk.go.id/Details/229798/uu-no-27-" target="_blank" rel="noopener noreferrer">UU PDP 2022</a>, <a href="https://www.acm.org/code-of-ethics" target="_blank" rel="noopener noreferrer">ACM</a></p>
+        <div class="subsection-conclusion"><span class="conclusion-label">KESIMPULAN SUBBAB</span><p>Kemampuan komputasi, penyimpanan, jaringan, dan analisis data memperluas manfaat teknologi sekaligus memperbesar risiko privasi dan penyalahgunaan. Data historis dalam slide perlu dibaca sesuai tahunnya, sedangkan prinsip etika tetap relevan untuk menilai teknologi yang berkembang.</p></div>
+      </div>
+    </section></div></div>
+  <nav class="page-pagination" aria-label="Navigasi materi"><a href="prinsip-etika.html"><small>SEBELUMNYA</small><strong>← Prinsip dan Dimensi Etika</strong></a><a class="next-page" href="real-space-cyber-space.html"><small>SELANJUTNYA</small><strong>Real Space = Cyber Space →</strong></a></nav>
+</main><footer class="site-footer">
+      <div class="footer-main">
+        <div class="footer-brand-block"><span class="footer-mark">ED</span><div><strong>Etika di Era Teknologi Informasi</strong><p>Media pembelajaran · Kelompok 6 · PAI 1D</p></div></div>
+        <div class="footer-campus">UIN Siber Syekh Nurjati Cirebon</div>
+        <a class="footer-about-link" href="tentang-kami.html">Tentang pengembang <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="footer-bottom"><span>© 2026 Kelompok 6. Hak cipta konten dan pengembangan website dimiliki bersama oleh kelompok.</span><span>Gunakan teknologi secara bijak dan bertanggung jawab.</span></div>
+    </footer><button class="back-to-top" id="backToTop" type="button" aria-label="Kembali ke atas" title="Kembali ke atas"><span aria-hidden="true">↑</span></button></body></html>

@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#007934"><meta name="description" content="Setelah memahami Cyberethics dan sistem moral, langkah berikutnya adalah menerapkan prinsip etika pada persoalan yang muncul dari penggunaan sistem informasi. Materi ini mengikuti lima dimensi moral yang ditampilkan dalam PDF Pertemuan 06: hak informasi, hak kepemilikan, kualitas sistem, kualitas hidup, serta akuntabilitas dan kontrol."><title>Prinsip dan Dimensi Etika Digital | Etika Digital - Kelompok 6</title><script>
+  try {
+    if (sessionStorage.getItem('pai1dPageTransition') === '1') {
+      document.documentElement.classList.add('page-transition-in');
+      sessionStorage.removeItem('pai1dPageTransition');
+    }
+  } catch (error) {}
+</script>
+
+<script>
+/* Deteksi awal Welcome Screen sebelum halaman dirender agar tidak berkedip. */
+(function () {
+  var SIX_HOURS = 6 * 60 * 60 * 1000;
+  var LOCAL_KEY = 'pai1dEtikaDigitalLastVisit';
+  var SESSION_KEY = 'pai1dEtikaDigitalLastActivityInTab';
+  var WINDOW_TOKEN = '__PAI1D_WELCOME_LAST_ACTIVITY__=';
+
+  function readStorage(storage, key) {
+    try { return Number(storage.getItem(key) || 0); }
+    catch (error) { return 0; }
+  }
+
+  function readWindowTime() {
+    try {
+      var match = String(window.name || '').match(/(?:^|;)__PAI1D_WELCOME_LAST_ACTIVITY__=(\d+)/);
+      return match ? Number(match[1]) : 0;
+    } catch (error) { return 0; }
+  }
+
+  var last = Math.max(
+    readStorage(window.localStorage, LOCAL_KEY),
+    readStorage(window.sessionStorage, SESSION_KEY),
+    readWindowTime()
+  );
+  var recent = last > 0 && Date.now() >= last && Date.now() - last < SIX_HOURS;
+
+  if (recent) document.documentElement.classList.add('welcome-suppressed');
+})();
+</script>
+
+<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/responsive.css"><script src="js/main.js" defer></script><script src="js/welcome.js" defer></script></head>
+<body data-page="prinsip">
+<div class="page-loader" id="pageLoader" aria-hidden="true">
+  <div class="skeleton-shell">
+    <div class="skeleton-header" aria-hidden="true">
+      <div class="skeleton-brand"><span class="skeleton-block skeleton-logo"></span><span class="skeleton-block skeleton-brand-name"></span></div>
+      <div class="skeleton-nav"><span class="skeleton-block"></span><span class="skeleton-block"></span><span class="skeleton-block"></span><span class="skeleton-block"></span></div>
+    </div>
+    <div class="skeleton-content" aria-hidden="true">
+      <span class="skeleton-block skeleton-eyebrow"></span>
+      <span class="skeleton-block skeleton-title"></span>
+      <span class="skeleton-block skeleton-title skeleton-title-short"></span>
+      <span class="skeleton-block skeleton-copy skeleton-copy-wide"></span>
+      <span class="skeleton-block skeleton-copy"></span>
+      <div class="skeleton-cards">
+        <div class="skeleton-card"><span class="skeleton-block skeleton-card-icon"></span><span class="skeleton-block skeleton-card-title"></span><span class="skeleton-block skeleton-card-line"></span><span class="skeleton-block skeleton-card-line skeleton-card-line-short"></span></div>
+        <div class="skeleton-card"><span class="skeleton-block skeleton-card-icon"></span><span class="skeleton-block skeleton-card-title"></span><span class="skeleton-block skeleton-card-line"></span><span class="skeleton-block skeleton-card-line skeleton-card-line-short"></span></div>
+        <div class="skeleton-card"><span class="skeleton-block skeleton-card-icon"></span><span class="skeleton-block skeleton-card-title"></span><span class="skeleton-block skeleton-card-line"></span><span class="skeleton-block skeleton-card-line skeleton-card-line-short"></span></div>
+      </div>
+    </div>
+    <span class="skeleton-sr-only">Memuat halaman berikutnya…</span>
+  </div>
+</div>
+<div class="welcome-screen" id="welcomeScreen" aria-labelledby="welcomeTitle" aria-modal="true" role="dialog">
+      <div class="welcome-panel">
+        <img class="welcome-logo" src="assets/foto/logo%20pai1d.png" alt="Logo PAI 1D" onerror="this.classList.add('logo-missing')">
+        <span class="eyebrow">MEDIA PEMBELAJARAN · KELOMPOK 6 · PAI 1D</span>
+        <h1 id="welcomeTitle">Etika di Era<br><span>Teknologi Informasi</span></h1>
+        <p class="welcome-description">Menjelajahi teknologi dengan pengetahuan, etika, dan tanggung jawab.</p>
+        <button class="button button-primary welcome-enter" id="enterWebsite" type="button">Masuk ke Website <span aria-hidden="true">→</span></button>
+        <p class="welcome-footnote">UIN Siber Syekh Nurjati Cirebon</p>
+      </div>
+    </div><header class="site-header">
+      <a class="brand" href="index.html" aria-label="Beranda Etika Digital">
+        <img class="brand-logo" src="assets/foto/logo%20pai1d.png" alt="Logo PAI 1D" onerror="this.classList.add('logo-missing')">
+        <span class="brand-name">Etika Digital</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Buka navigasi" aria-expanded="false" aria-controls="mainNav"><span></span><span></span><span></span></button>
+      <nav class="main-nav" id="mainNav" aria-label="Navigasi utama"><a class="nav-link " href="index.html">Beranda</a><a class="nav-link " href="cyberethics.html">Cyberethics</a><a class="nav-link active" href="prinsip-etika.html">Prinsip Etika</a><a class="nav-link " href="perkembangan-cyberspace.html">Perkembangan</a><a class="nav-link " href="real-space-cyber-space.html">Real = Cyber</a><a class="nav-link " href="kasus-kesimpulan.html">Kasus & Kesimpulan</a><a class="nav-link " href="tentang-kami.html">Tentang Kami</a></nav>
+    </header>
+<main class="article-main section-wrap">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Beranda</a><span>/</span><span>Prinsip dan Dimensi Etika Digital</span></nav>
+  <header class="article-hero"><span class="eyebrow">MATERI 02 · ETIKA DI ERA TEKNOLOGI INFORMASI · KELOMPOK 6</span><h1>Prinsip dan Dimensi Etika Digital</h1><h2>Lima dimensi moral untuk memahami dampak sistem informasi</h2><p>Setelah memahami Cyberethics dan sistem moral, langkah berikutnya adalah menerapkan prinsip etika pada persoalan yang muncul dari penggunaan sistem informasi. Materi ini mengikuti lima dimensi moral yang ditampilkan dalam PDF Pertemuan 06: hak informasi, hak kepemilikan, kualitas sistem, kualitas hidup, serta akuntabilitas dan kontrol.</p></header>
+  <aside class="article-callout"><span class="callout-mark">✦</span><div><strong>Tujuan pembelajaran</strong><p>Menguraikan aturan perilaku, prinsip evaluasi, dan lima dimensi moral yang perlu diperhatikan ketika merancang atau menggunakan sistem informasi.</p><p class="callout-subtext">Pembahasan mengikuti susunan PDF Pertemuan 06 dan dilengkapi rujukan akademik, kode etik profesi, serta peraturan resmi yang relevan.</p></div></aside>
+  <div class="article-layout"><aside class="toc"><strong>Dalam halaman ini</strong><ol><li><a href="#bagian-1">Prinsip etika dan aturan perilaku</a></li><li><a href="#bagian-2">Hak informasi dan kewajiban privasi</a></li><li><a href="#bagian-3">Hak kepemilikan dan kekayaan intelektual</a></li><li><a href="#bagian-4">Kualitas sistem informasi</a></li><li><a href="#bagian-5">Kualitas hidup dalam masyarakat digital</a></li><li><a href="#bagian-6">Akuntabilitas, tanggung jawab, dan kontrol</a></li></ol><div class="toc-note">Setiap subbab diakhiri kesimpulan singkat untuk menegaskan inti pembahasan.</div></aside><div class="article-content"><section class="article-section" id="bagian-1">
+      <span class="section-index">01</span>
+      <div class="article-section-body">
+        <h2>Prinsip etika dan aturan perilaku</h2>
+        
+        <p>Prinsip etika adalah pedoman untuk menilai tindakan dan mengambil keputusan ketika kepentingan beberapa pihak saling berhubungan. Dalam sistem informasi, prinsip tersebut membantu pengguna dan pengelola teknologi mempertimbangkan manfaat, potensi kerugian, keadilan, privasi, serta hak atas karya orang lain. Prinsip tidak hanya berlaku ketika terjadi pelanggaran; prinsip juga seharusnya digunakan sejak tahap perencanaan dan perancangan sistem.</p>
+        <p>PDF menjelaskan bahwa aturan perilaku dapat berupa arahan langsung untuk individu (<em>microlevel rules</em>) atau kebijakan sosial dan organisasi (<em>macrolevel rules</em>). Arahan langsung misalnya tidak mengambil data tanpa izin dan tidak merugikan orang lain. Kebijakan organisasi misalnya menetapkan prosedur pengamanan data, pembatasan akses, serta tata cara penggunaan perangkat lunak yang sah.</p>
+        <p>Sebagai pengayaan, Kode Etik ACM untuk profesional komputasi menekankan kontribusi bagi kesejahteraan masyarakat, menghindari bahaya, kejujuran, keadilan, penghormatan terhadap karya intelektual, privasi, dan kerahasiaan. Kode ini dapat menjadi rujukan etis bagi profesional dan mahasiswa bidang komputasi, meskipun penerapannya tetap perlu disesuaikan dengan konteks dan aturan yang berlaku.</p>
+        <p>Dalam praktiknya, prinsip etika tidak selalu menghasilkan jawaban instan. Misalnya, sebuah aplikasi dapat memberi kemudahan bagi banyak orang, tetapi juga mengumpulkan data sensitif. Penilaian yang baik harus mempertimbangkan manfaatnya sekaligus risiko, persetujuan pengguna, keamanan penyimpanan, dan kemungkinan penyalahgunaan.</p>
+      
+        <p class="source-note">Dasar materi: PDF Pertemuan 06, halaman 8–9. · Pengayaan: <a href="https://www.acm.org/code-of-ethics" target="_blank" rel="noopener noreferrer">ACM</a>, <a href="https://elmhurst.ecampus.com/ethics-technology-ethical-issues-age/bk/9780471998037" target="_blank" rel="noopener noreferrer">Tavani</a></p>
+        <div class="subsection-conclusion"><span class="conclusion-label">KESIMPULAN SUBBAB</span><p>Prinsip etika mengubah nilai moral menjadi pedoman tindakan dan kebijakan. Keputusan digital perlu menimbang manfaat, keadilan, pencegahan kerugian, kejujuran, privasi, serta penghormatan terhadap karya dan hak orang lain.</p></div>
+      </div>
+    </section><section class="article-section" id="bagian-2">
+      <span class="section-index">02</span>
+      <div class="article-section-body">
+        <h2>Hak informasi dan kewajiban privasi</h2>
+        
+        <p>Dimensi <strong>information rights and obligations</strong> membahas hak seseorang atas informasi mengenai dirinya dan kewajiban pihak lain ketika mengumpulkan, menyimpan, menggunakan, atau membagikan informasi tersebut. Pertanyaan yang diajukan dalam PDF antara lain: informasi apa yang boleh dimiliki pihak lain tentang seseorang, apakah informasi pelanggan boleh dijual, dan sejauh mana perilaku pelanggan dapat dilacak?</p>
+        <p>Data pribadi tidak hanya berupa nomor identitas. Nama, alamat, nomor telepon, lokasi, riwayat transaksi, foto, identitas akun, dan gabungan beberapa data dapat mengarah pada identifikasi seseorang. Ketika data tersebut dikumpulkan tanpa tujuan yang jelas atau dibagikan tanpa dasar yang sah, individu dapat mengalami spam, penipuan, pencurian identitas, diskriminasi, atau hilangnya kendali atas informasi pribadinya.</p>
+        <p>Praktik yang lebih bertanggung jawab dimulai dengan menjelaskan tujuan pengumpulan data, meminta persetujuan ketika diperlukan, membatasi data yang dikumpulkan sesuai kebutuhan, mengamankan penyimpanan, membatasi akses, serta tidak menggunakan data untuk tujuan lain secara diam-diam. Pengguna juga perlu membaca pengaturan privasi, berhati-hati ketika mengunggah dokumen, dan tidak memberikan kode OTP atau kata sandi kepada pihak lain.</p>
+        <p>Di Indonesia, pengelolaan data pribadi memiliki landasan hukum dalam <strong>UU Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi</strong>. Undang-undang tersebut mengatur hak subjek data pribadi, pemrosesan data, kewajiban pengendali dan prosesor data, serta larangan dan sanksi terkait penggunaan data pribadi. Rujukan hukum ini memperkuat pembahasan privasi yang menjadi salah satu dimensi moral dalam materi kuliah.</p>
+      
+        <p class="source-note">Dasar materi: PDF Pertemuan 06, halaman 10–13. · Pengayaan: <a href="https://peraturan.bpk.go.id/Details/229798/uu-no-27-tahun-2022" target="_blank" rel="noopener noreferrer">UU PDP 2022</a></p>
+        <div class="subsection-conclusion"><span class="conclusion-label">KESIMPULAN SUBBAB</span><p>Informasi pribadi harus diperlakukan secara hati-hati. Pengumpulan dan penggunaan data perlu memiliki tujuan yang jelas, dasar yang sah, pengamanan yang memadai, dan penghormatan terhadap hak pemilik data sebagaimana diatur antara lain dalam UU Pelindungan Data Pribadi.</p></div>
+      </div>
+    </section><section class="article-section" id="bagian-3">
+      <span class="section-index">03</span>
+      <div class="article-section-body">
+        <h2>Hak kepemilikan dan kekayaan intelektual</h2>
+        
+        <p>Dimensi <strong>property rights and obligations</strong> menanyakan siapa yang memiliki perangkat lunak, data, musik, film, tulisan, foto, dan karya digital lainnya, serta bagaimana hak tersebut dilindungi. Kemudahan menyalin file melalui internet tidak berarti semua file bebas digandakan atau didistribusikan. Salinan digital tetap dapat terkait dengan hak pencipta, pemegang hak, lisensi, dan ketentuan penggunaan.</p>
+        <p>Contoh persoalan yang dekat dengan mahasiswa adalah mengunduh perangkat lunak bajakan, mengunggah ulang film tanpa izin, mengambil gambar dari internet tanpa atribusi atau izin yang diperlukan, serta menyalin tulisan orang lain seolah-olah karya sendiri. Selain berpotensi melanggar hukum, tindakan tersebut juga mengabaikan usaha, kreativitas, dan hak ekonomi pencipta.</p>
+        <p>Perilaku yang lebih etis adalah menggunakan perangkat lunak berlisensi atau alternatif sumber terbuka sesuai lisensinya, mencantumkan sumber ketika mengutip, meminta izin jika penggunaan memerlukannya, dan memeriksa ketentuan lisensi sebelum membagikan kembali suatu karya. Atribusi merupakan kebiasaan akademik yang baik, tetapi atribusi saja tidak otomatis menggantikan izin apabila izin memang dibutuhkan.</p>
+        <p>Di Indonesia, UU Nomor 28 Tahun 2014 tentang Hak Cipta memberikan kerangka perlindungan terhadap karya cipta, termasuk karya yang digunakan dalam lingkungan digital. Oleh sebab itu, berbagi file perlu dilakukan dengan memperhatikan hak pencipta dan ketentuan penggunaan, bukan hanya berdasarkan apakah file tersebut mudah ditemukan di internet.</p>
+      
+        <p class="source-note">Dasar materi: PDF Pertemuan 06, halaman 12. · Pengayaan: <a href="https://peraturan.bpk.go.id/Details/38690/uu-no-28-tahun-2014" target="_blank" rel="noopener noreferrer">UU Hak Cipta 2014</a>, <a href="https://www.acm.org/code-of-ethics" target="_blank" rel="noopener noreferrer">ACM</a></p>
+        <div class="subsection-conclusion"><span class="conclusion-label">KESIMPULAN SUBBAB</span><p>Karya digital tetap memiliki pencipta dan pemegang hak. Menghormati kekayaan intelektual berarti menggunakan karya sesuai lisensi, memberi atribusi yang benar, dan meminta izin ketika diperlukan.</p></div>
+      </div>
+    </section><section class="article-section" id="bagian-4">
+      <span class="section-index">04</span>
+      <div class="article-section-body">
+        <h2>Kualitas sistem informasi</h2>
+        
+        <p>Dimensi <strong>system quality</strong> membahas standar mutu data dan sistem informasi. Sistem yang digunakan masyarakat seharusnya dapat bekerja sesuai kebutuhan, andal, aman, dan diuji sebelum diterapkan. PDF mengangkat contoh pengujian perangkat lunak dan <em>bug</em>: siapa yang bertanggung jawab jika kesalahan program menyebabkan masalah?</p>
+        <p>Kualitas sistem tidak hanya berkaitan dengan apakah aplikasi dapat dibuka. Sistem juga perlu menjaga akurasi data, melindungi akses, mengurangi kesalahan, memberi informasi yang dapat dipahami, dan memiliki mekanisme pemulihan ketika terjadi gangguan. Pengujian sebelum peluncuran, dokumentasi, pembaruan keamanan, pencadangan, serta penanganan laporan pengguna merupakan bagian dari upaya menjaga kualitas.</p>
+        <p>Jika suatu <em>bug</em> menimbulkan kerugian, evaluasi perlu melihat proses pengembangan dan pengujian, informasi risiko yang telah disampaikan, cara sistem digunakan, serta kewajiban pihak-pihak yang terlibat. Tidak tepat menyimpulkan tanggung jawab hanya dari fakta bahwa kesalahan muncul pada komputer; tanggung jawab perlu ditelusuri berdasarkan peran dan kendali masing-masing pihak.</p>
+      
+        <p class="source-note">Dasar materi: PDF Pertemuan 06, halaman 12–13. · Pengayaan: Laudon & Laudon, <a href="https://www.acm.org/code-of-ethics" target="_blank" rel="noopener noreferrer">ACM</a></p>
+        <div class="subsection-conclusion"><span class="conclusion-label">KESIMPULAN SUBBAB</span><p>Kualitas sistem mencakup keandalan, keamanan, akurasi, pengujian, dan kemampuan pemulihan. Ketika kesalahan sistem merugikan pengguna, tanggung jawab perlu dinilai berdasarkan proses dan peran pihak yang terlibat.</p></div>
+      </div>
+    </section><section class="article-section" id="bagian-5">
+      <span class="section-index">05</span>
+      <div class="article-section-body">
+        <h2>Kualitas hidup dalam masyarakat digital</h2>
+        
+        <p>Dimensi <strong>quality of life</strong> menyoroti bagaimana sistem informasi memengaruhi keseharian manusia. Teknologi memungkinkan seseorang bekerja, belajar, berkomunikasi, dan bertransaksi kapan saja. Kemudahan tersebut dapat meningkatkan produktivitas dan memperluas akses, tetapi penggunaan tanpa batas juga dapat mengganggu waktu istirahat, kehidupan keluarga, konsentrasi, dan kualitas hubungan sosial.</p>
+        <p>Materi kuliah juga mengingatkan bahwa teknologi dapat melahirkan cara baru untuk melakukan kejahatan. Komputer dan jaringan bisa digunakan untuk pencurian, penipuan, ancaman, atau tindakan lain yang sebelumnya dilakukan secara langsung. Karena itu, kualitas hidup tidak hanya berkaitan dengan kenyamanan, tetapi juga rasa aman, perlindungan dari penyalahgunaan, dan kemampuan masyarakat mengendalikan penggunaan teknologi.</p>
+        <p>Organisasi sebaiknya menyediakan sistem yang aman dan mudah diakses, sedangkan pengguna perlu menetapkan batas penggunaan, menjaga keseimbangan aktivitas daring dan luring, dan memperhatikan dampak teknologi terhadap orang di sekitarnya. Teknologi yang bermanfaat seharusnya mendukung kehidupan manusia, bukan membuat manusia kehilangan kendali atas waktu, perhatian, atau privasinya.</p>
+      
+        <p class="source-note">Dasar materi: PDF Pertemuan 06, halaman 13. · Pengayaan: Laudon & Laudon, <a href="https://www.acm.org/code-of-ethics" target="_blank" rel="noopener noreferrer">ACM</a></p>
+        <div class="subsection-conclusion"><span class="conclusion-label">KESIMPULAN SUBBAB</span><p>Kualitas hidup menilai apakah teknologi meningkatkan kesejahteraan tanpa mengorbankan kesehatan sosial, waktu, privasi, dan rasa aman. Manfaat digital perlu diimbangi penggunaan yang wajar dan perlindungan dari penyalahgunaan.</p></div>
+      </div>
+    </section><section class="article-section" id="bagian-6">
+      <span class="section-index">06</span>
+      <div class="article-section-body">
+        <h2>Akuntabilitas, tanggung jawab, dan kontrol</h2>
+        
+        <p>Dimensi <strong>accountability and control</strong> mengajukan pertanyaan penting: siapa yang harus bertanggung jawab ketika seseorang dirugikan oleh teknologi? Jawabannya bergantung pada peran dan fakta dalam suatu peristiwa. Pengguna bertanggung jawab atas tindakannya, pengembang perlu memperhatikan risiko desain, organisasi wajib mengelola sistem dan data secara patut, sedangkan penyedia layanan memiliki tanggung jawab sesuai fungsi dan kewajiban hukumnya.</p>
+        <p>Akuntabilitas berarti keputusan dan tindakan dapat ditelusuri serta dijelaskan. Dalam organisasi, hal ini dapat didukung melalui pembagian kewenangan, pencatatan aktivitas sistem (<em>log</em>), dokumentasi perubahan, prosedur pengaduan, audit, dan peninjauan insiden. Kontrol berarti adanya mekanisme untuk mencegah atau memperbaiki penyalahgunaan, misalnya pembatasan hak akses, autentikasi berlapis, persetujuan sebelum pemrosesan data, serta proses koreksi ketika sistem menghasilkan kesalahan.</p>
+        <p>Akuntabilitas juga berkaitan dengan transparansi. Jika suatu keputusan dibuat dengan bantuan sistem otomatis, pihak yang terdampak perlu memperoleh penjelasan yang wajar tentang proses dan saluran untuk mengajukan keberatan. Tidak tepat apabila organisasi menganggap teknologi sebagai satu-satunya pihak yang bertanggung jawab, sebab manusia dan lembaga tetap menentukan tujuan, data, desain, serta cara sistem digunakan.</p>
+      
+        <p class="source-note">Dasar materi: PDF Pertemuan 06, halaman 10–13. · Pengayaan: Laudon & Laudon, <a href="https://peraturan.bpk.go.id/Details/274494/uu-no-1-tahun-2024" target="_blank" rel="noopener noreferrer">UU ITE 2024</a>, <a href="https://www.acm.org/code-of-ethics" target="_blank" rel="noopener noreferrer">ACM</a></p>
+        <div class="subsection-conclusion"><span class="conclusion-label">KESIMPULAN SUBBAB</span><p>Ketika teknologi menimbulkan kerugian, tanggung jawab perlu ditelusuri berdasarkan peran, kendali, dan kewajiban masing-masing pihak. Dokumentasi, pembatasan akses, audit, dan mekanisme pengaduan memperkuat akuntabilitas.</p></div>
+      </div>
+    </section></div></div>
+  <nav class="page-pagination" aria-label="Navigasi materi"><a href="cyberethics.html"><small>SEBELUMNYA</small><strong>← Cyberethics</strong></a><a class="next-page" href="perkembangan-cyberspace.html"><small>SELANJUTNYA</small><strong>Perkembangan Cyberspace →</strong></a></nav>
+</main><footer class="site-footer">
+      <div class="footer-main">
+        <div class="footer-brand-block"><span class="footer-mark">ED</span><div><strong>Etika di Era Teknologi Informasi</strong><p>Media pembelajaran · Kelompok 6 · PAI 1D</p></div></div>
+        <div class="footer-campus">UIN Siber Syekh Nurjati Cirebon</div>
+        <a class="footer-about-link" href="tentang-kami.html">Tentang pengembang <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="footer-bottom"><span>© 2026 Kelompok 6. Hak cipta konten dan pengembangan website dimiliki bersama oleh kelompok.</span><span>Gunakan teknologi secara bijak dan bertanggung jawab.</span></div>
+    </footer><button class="back-to-top" id="backToTop" type="button" aria-label="Kembali ke atas" title="Kembali ke atas"><span aria-hidden="true">↑</span></button></body></html>

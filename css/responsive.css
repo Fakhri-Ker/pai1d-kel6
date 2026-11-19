@@ -1,0 +1,124 @@
+@media(max-width:1120px){.site-header{padding-inline:24px}.main-nav{gap:1px}.nav-link{padding:8px;font-size:.78rem}.hero{gap:30px}.material-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:880px){.site-header{height:72px}.menu-toggle{display:block;z-index:82}.main-nav{position:absolute;top:72px;left:0;right:0;display:flex;flex-direction:column;align-items:stretch;gap:4px;background:#fff;padding:14px 20px 20px;border-bottom:1px solid var(--line);box-shadow:0 16px 28px #0f172a12;opacity:0;visibility:hidden;transform:translateY(-8px);transition:.2s;max-height:calc(100vh - 72px);overflow:auto}.main-nav.open{opacity:1;visibility:visible;transform:translateY(0)}.nav-link{padding:12px 14px;font-size:.94rem}.hero{grid-template-columns:1fr;min-height:0;padding-block:54px;gap:32px}.hero-copy{max-width:740px}.hero-visual{height:300px}.intro-band-inner{grid-template-columns:1fr;gap:18px;padding-block:44px}.article-layout{grid-template-columns:1fr;gap:26px}.toc{position:static}.toc ol{columns:2}.footer-main{flex-wrap:wrap}.footer-campus{order:3;width:100%}}
+@media(max-width:620px){.section-wrap{width:calc(100% - 32px)}.site-header{padding-inline:16px}.brand-name{font-size:.94rem}.brand-logo{width:38px;height:38px}.hero{padding-block:42px 32px;gap:26px}.hero h1{font-size:clamp(2.2rem,10.5vw,3rem);letter-spacing:-1.4px}.hero-copy>p{font-size:.98rem}.hero-visual{height:235px;border-radius:20px}.ring-a{width:220px;height:220px}.ring-b{width:165px;height:165px}.visual-center{width:112px;height:112px}.label-a{top:26px;right:16px}.label-b{bottom:28px;left:12px}.label-c{left:8px}.video-section{padding-block:42px 52px}.section-heading{margin-bottom:22px}.section-heading h2{font-size:1.75rem}.video-frame{border-radius:14px}.intro-band-inner{padding-block:36px}.intro-band h2{font-size:1.65rem}.materials-section{padding-block:52px}.material-grid{grid-template-columns:1fr;gap:12px}.material-card{min-height:195px;padding:20px}.closing-cta{width:calc(100% - 32px);margin-bottom:48px;padding:25px 22px;align-items:flex-start;flex-direction:column}.site-footer{padding:30px 16px 18px}.footer-main{align-items:flex-start;flex-direction:column;gap:15px}.footer-campus{order:0}.footer-bottom{flex-direction:column;gap:7px}.welcome-panel{padding:28px 20px;border-radius:22px}.welcome-logo{width:70px;height:70px}.welcome-description{font-size:.94rem}.welcome-enter{width:100%}.article-main{padding-block:22px 50px}.article-hero{padding-block:24px}.article-hero h1{font-size:2.25rem;letter-spacing:-1.2px}.article-hero h2{font-size:1.08rem}.article-hero>p{font-size:.96rem}.article-callout{padding:16px;margin-bottom:30px}.toc ol{columns:1}.article-section{grid-template-columns:36px 1fr;gap:12px;padding-bottom:22px;margin-bottom:22px}.section-index{width:32px;height:32px}.article-section h2{font-size:1.13rem}.page-pagination{gap:10px}.page-pagination strong{font-size:.82rem}.about-main{padding-block:44px 56px}.about-hero h1{font-size:2.6rem}.about-hero>p{font-size:1rem}.about-purpose{padding:20px;gap:14px;margin:26px 0 46px}.purpose-icon{flex-basis:40px;width:40px;height:40px}.member-grid{grid-template-columns:1fr}.member-card{padding:18px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+
+
+/* =========================================================
+   MOBILE-ONLY SUBBAB NAVIGATION
+   Desktop/tablet layout and left-side TOC are kept as before.
+   ========================================================= */
+.mobile-nav-group,
+.mobile-nav-row {
+  display: contents;
+}
+.mobile-submenu-toggle,
+.mobile-subnav {
+  display: none;
+}
+
+@media (max-width: 620px) {
+  /* Pada HP, TOC tidak lagi diletakkan di atas isi artikel.
+     Subbab tersedia melalui menu hamburger sesuai bab yang dibuka. */
+  .article-layout .toc {
+    display: none;
+  }
+
+  .main-nav .mobile-nav-group {
+    display: block;
+    width: 100%;
+    padding: 2px 0 6px;
+    border-bottom: 1px solid #edf1f4;
+  }
+  .main-nav .mobile-nav-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+  }
+  .main-nav .mobile-nav-row > .nav-link {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+  .mobile-submenu-toggle {
+    flex: 0 0 42px;
+    width: 42px;
+    height: 42px;
+    display: inline-grid;
+    place-items: center;
+    border: 1px solid #e1ebe4;
+    border-radius: 11px;
+    background: #f8fbf9;
+    color: var(--green);
+    cursor: pointer;
+    transition: background .2s, border-color .2s, transform .2s;
+  }
+  .mobile-submenu-chevron {
+    display: inline-block;
+    font-size: 1.35rem;
+    line-height: 1;
+    transform: translateY(-2px);
+    transition: transform .22s ease;
+  }
+  .mobile-nav-group.is-expanded .mobile-submenu-toggle {
+    background: var(--green-soft);
+    border-color: #c8dfcf;
+  }
+  .mobile-nav-group.is-expanded .mobile-submenu-chevron {
+    transform: rotate(180deg) translateY(2px);
+  }
+  .mobile-subnav {
+    display: none;
+    gap: 3px;
+    margin: 7px 0 5px 13px;
+    padding: 7px 0 7px 13px;
+    border-left: 2px solid #dcebe1;
+  }
+  .mobile-nav-group.is-expanded .mobile-subnav {
+    display: grid;
+  }
+  .mobile-subnav[hidden] {
+    display: none !important;
+  }
+  .mobile-subnav-label {
+    padding: 3px 10px 6px;
+    color: #a78621;
+    font-size: .64rem;
+    font-weight: 900;
+    letter-spacing: 1.15px;
+  }
+  .mobile-subnav a {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    padding: 8px 10px;
+    border-radius: 9px;
+    color: #526174;
+    font-size: .82rem;
+    line-height: 1.45;
+    transition: color .18s, background .18s, transform .18s;
+  }
+  .mobile-subnav a:hover,
+  .mobile-subnav a.is-active {
+    color: var(--green-dark);
+    background: #edf6f0;
+  }
+  .mobile-subnav a.is-active {
+    font-weight: 800;
+  }
+  .mobile-subnav-number {
+    flex: 0 0 21px;
+    color: #a78621;
+    font-size: .68rem;
+    font-weight: 900;
+    padding-top: 1px;
+  }
+  .main-nav {
+    max-height: calc(100dvh - 72px);
+    overscroll-behavior: contain;
+  }
+  .article-section {
+    scroll-margin-top: 88px;
+  }
+}

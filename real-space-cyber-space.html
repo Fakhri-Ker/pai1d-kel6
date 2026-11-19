@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#007934"><meta name="description" content="Gagasan utama bagian ini adalah bahwa etika tidak berubah hanya karena interaksi berpindah dari ruang fisik ke ruang digital. Perilaku yang merugikan orang lain di dunia nyata tetap dapat merugikan ketika dilakukan melalui internet."><title>Real Space = Cyber Space | Etika Digital - Kelompok 6</title><script>
+  try {
+    if (sessionStorage.getItem('pai1dPageTransition') === '1') {
+      document.documentElement.classList.add('page-transition-in');
+      sessionStorage.removeItem('pai1dPageTransition');
+    }
+  } catch (error) {}
+</script>
+
+<script>
+/* Deteksi awal Welcome Screen sebelum halaman dirender agar tidak berkedip. */
+(function () {
+  var SIX_HOURS = 6 * 60 * 60 * 1000;
+  var LOCAL_KEY = 'pai1dEtikaDigitalLastVisit';
+  var SESSION_KEY = 'pai1dEtikaDigitalLastActivityInTab';
+  var WINDOW_TOKEN = '__PAI1D_WELCOME_LAST_ACTIVITY__=';
+
+  function readStorage(storage, key) {
+    try { return Number(storage.getItem(key) || 0); }
+    catch (error) { return 0; }
+  }
+
+  function readWindowTime() {
+    try {
+      var match = String(window.name || '').match(/(?:^|;)__PAI1D_WELCOME_LAST_ACTIVITY__=(\d+)/);
+      return match ? Number(match[1]) : 0;
+    } catch (error) { return 0; }
+  }
+
+  var last = Math.max(
+    readStorage(window.localStorage, LOCAL_KEY),
+    readStorage(window.sessionStorage, SESSION_KEY),
+    readWindowTime()
+  );
+  var recent = last > 0 && Date.now() >= last && Date.now() - last < SIX_HOURS;
+
+  if (recent) document.documentElement.classList.add('welcome-suppressed');
+})();
+</script>
+
+<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/responsive.css"><script src="js/main.js" defer></script><script src="js/welcome.js" defer></script></head>
+<body data-page="real">
+<div class="page-loader" id="pageLoader" aria-hidden="true">
+  <div class="skeleton-shell">
+    <div class="skeleton-header" aria-hidden="true">
+      <div class="skeleton-brand"><span class="skeleton-block skeleton-logo"></span><span class="skeleton-block skeleton-brand-name"></span></div>
+      <div class="skeleton-nav"><span class="skeleton-block"></span><span class="skeleton-block"></span><span class="skeleton-block"></span><span class="skeleton-block"></span></div>
+    </div>
+    <div class="skeleton-content" aria-hidden="true">
+      <span class="skeleton-block skeleton-eyebrow"></span>
+      <span class="skeleton-block skeleton-title"></span>
+      <span class="skeleton-block skeleton-title skeleton-title-short"></span>
+      <span class="skeleton-block skeleton-copy skeleton-copy-wide"></span>
+      <span class="skeleton-block skeleton-copy"></span>
+      <div class="skeleton-cards">
+        <div class="skeleton-card"><span class="skeleton-block skeleton-card-icon"></span><span class="skeleton-block skeleton-card-title"></span><span class="skeleton-block skeleton-card-line"></span><span class="skeleton-block skeleton-card-line skeleton-card-line-short"></span></div>
+        <div class="skeleton-card"><span class="skeleton-block skeleton-card-icon"></span><span class="skeleton-block skeleton-card-title"></span><span class="skeleton-block skeleton-card-line"></span><span class="skeleton-block skeleton-card-line skeleton-card-line-short"></span></div>
+        <div class="skeleton-card"><span class="skeleton-block skeleton-card-icon"></span><span class="skeleton-block skeleton-card-title"></span><span class="skeleton-block skeleton-card-line"></span><span class="skeleton-block skeleton-card-line skeleton-card-line-short"></span></div>
+      </div>
+    </div>
+    <span class="skeleton-sr-only">Memuat halaman berikutnya…</span>
+  </div>
+</div>
+<div class="welcome-screen" id="welcomeScreen" aria-labelledby="welcomeTitle" aria-modal="true" role="dialog">
+      <div class="welcome-panel">
+        <img class="welcome-logo" src="assets/foto/logo%20pai1d.png" alt="Logo PAI 1D" onerror="this.classList.add('logo-missing')">
+        <span class="eyebrow">MEDIA PEMBELAJARAN · KELOMPOK 6 · PAI 1D</span>
+        <h1 id="welcomeTitle">Etika di Era<br><span>Teknologi Informasi</span></h1>
+        <p class="welcome-description">Menjelajahi teknologi dengan pengetahuan, etika, dan tanggung jawab.</p>
+        <button class="button button-primary welcome-enter" id="enterWebsite" type="button">Masuk ke Website <span aria-hidden="true">→</span></button>
+        <p class="welcome-footnote">UIN Siber Syekh Nurjati Cirebon</p>
+      </div>
+    </div><header class="site-header">
+      <a class="brand" href="index.html" aria-label="Beranda Etika Digital">
+        <img class="brand-logo" src="assets/foto/logo%20pai1d.png" alt="Logo PAI 1D" onerror="this.classList.add('logo-missing')">
+        <span class="brand-name">Etika Digital</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Buka navigasi" aria-expanded="false" aria-controls="mainNav"><span></span><span></span><span></span></button>
+      <nav class="main-nav" id="mainNav" aria-label="Navigasi utama"><a class="nav-link " href="index.html">Beranda</a><a class="nav-link " href="cyberethics.html">Cyberethics</a><a class="nav-link " href="prinsip-etika.html">Prinsip Etika</a><a class="nav-link " href="perkembangan-cyberspace.html">Perkembangan</a><a class="nav-link active" href="real-space-cyber-space.html">Real = Cyber</a><a class="nav-link " href="kasus-kesimpulan.html">Kasus & Kesimpulan</a><a class="nav-link " href="tentang-kami.html">Tentang Kami</a></nav>
+    </header>
+<main class="article-main section-wrap">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Beranda</a><span>/</span><span>Real Space = Cyber Space</span></nav>
+  <header class="article-hero"><span class="eyebrow">MATERI 04 · ETIKA DI ERA TEKNOLOGI INFORMASI · KELOMPOK 6</span><h1>Real Space = Cyber Space</h1><h2>Norma dan tanggung jawab tetap berlaku di dunia maya</h2><p>Gagasan utama bagian ini adalah bahwa etika tidak berubah hanya karena interaksi berpindah dari ruang fisik ke ruang digital. Perilaku yang merugikan orang lain di dunia nyata tetap dapat merugikan ketika dilakukan melalui internet.</p></header>
+  <aside class="article-callout"><span class="callout-mark">✦</span><div><strong>Tujuan pembelajaran</strong><p>Menjelaskan kesamaan tanggung jawab etis di ruang nyata dan ruang siber serta menerapkannya dalam interaksi digital sehari-hari.</p><p class="callout-subtext">Pembahasan mengikuti susunan PDF Pertemuan 06 dan dilengkapi rujukan akademik, kode etik profesi, serta peraturan resmi yang relevan.</p></div></aside>
+  <div class="article-layout"><aside class="toc"><strong>Dalam halaman ini</strong><ol><li><a href="#bagian-1">Makna Real Space = Cyber Space</a></li><li><a href="#bagian-2">Norma sosial dan etiket dalam interaksi digital</a></li><li><a href="#bagian-3">Konten negatif dan pembentukan kebiasaan</a></li><li><a href="#bagian-4">Reputasi, privasi, dan jejak digital</a></li><li><a href="#bagian-5">Norma hukum sebagai batas perilaku</a></li></ol><div class="toc-note">Setiap subbab diakhiri kesimpulan singkat untuk menegaskan inti pembahasan.</div></aside><div class="article-content"><section class="article-section" id="bagian-1">
+      <span class="section-index">01</span>
+      <div class="article-section-body">
+        <h2>Makna Real Space = Cyber Space</h2>
+        
+        <p>Pernyataan <strong>“baik di dunia nyata = baik di dunia maya; buruk di dunia nyata = buruk di dunia maya”</strong> merupakan inti materi pada halaman 21. Maksudnya bukan bahwa ruang fisik dan ruang digital identik secara bentuk, melainkan bahwa nilai moral dan tanggung jawab manusia tetap berlaku ketika seseorang berinteraksi melalui teknologi.</p>
+        <p>Di dunia nyata, seseorang diharapkan menghormati orang lain, tidak mengambil milik orang lain, tidak menyebarkan rahasia, dan tidak merusak reputasi orang lain. Prinsip yang sama berlaku saat menggunakan media sosial, aplikasi pesan, forum, permainan daring, atau layanan digital lainnya. Perubahan media komunikasi tidak menghilangkan hak orang lain untuk dihormati.</p>
+        <p>Contohnya, mengejek seseorang secara langsung dan menyebarkan hinaan tentang orang tersebut di grup percakapan sama-sama dapat melukai. Mengambil barang milik orang lain dan mengambil alih akun digital tanpa izin sama-sama melanggar batas kepemilikan. Menyebarkan gosip secara lisan dan meneruskan tangkapan layar percakapan pribadi sama-sama dapat merusak reputasi serta privasi.</p>
+        <p>Ruang digital bahkan dapat memperluas dampak tindakan karena konten bisa disalin, disimpan, dicari kembali, dan disebarkan kepada banyak orang. Oleh karena itu, pengguna perlu berpikir sebelum mengunggah atau meneruskan sesuatu. Pertanyaan sederhana seperti “apakah saya akan melakukan hal ini secara langsung di hadapan orang tersebut?” dapat membantu menguji kepatutan tindakan, meskipun tetap perlu mempertimbangkan konteks dan akibat digitalnya.</p>
+      
+        <p class="source-note">Dasar materi: PDF Pertemuan 06, halaman 21. · Pengayaan: <a href="https://elmhurst.ecampus.com/ethics-technology-ethical-issues-age/bk/9780471998037" target="_blank" rel="noopener noreferrer">Tavani</a>, <a href="https://www.acm.org/code-of-ethics" target="_blank" rel="noopener noreferrer">ACM</a></p>
+        <div class="subsection-conclusion"><span class="conclusion-label">KESIMPULAN SUBBAB</span><p>Real Space = Cyber Space menegaskan kesinambungan etika: media boleh berubah, tetapi penghormatan, kejujuran, kepatutan, dan tanggung jawab kepada orang lain tetap berlaku. Dampak digital dapat bertahan dan menyebar lebih luas.</p></div>
+      </div>
+    </section><section class="article-section" id="bagian-2">
+      <span class="section-index">02</span>
+      <div class="article-section-body">
+        <h2>Norma sosial dan etiket dalam interaksi digital</h2>
+        
+        <p>PDF menyebut bahwa aktivitas di dunia nyata berlangsung dalam koridor norma kesopanan, kesusilaan, norma sosial, norma adat, dan norma hukum. Etiket yang sama harus tetap dijunjung di cyberspace. Norma membantu masyarakat menentukan perilaku yang dapat diterima dan menjaga agar interaksi tidak berubah menjadi tindakan yang merendahkan atau merugikan.</p>
+        <p>Norma kesopanan terlihat dalam cara menyapa, memilih kata, dan menghargai waktu orang lain. Norma kesusilaan berkaitan dengan perilaku yang menghormati martabat manusia dan tidak mengeksploitasi orang lain. Norma sosial dan adat dapat berbeda antarlingkungan, sehingga pengguna perlu peka terhadap konteks budaya. Norma hukum menetapkan batas yang memiliki konsekuensi hukum jika dilanggar.</p>
+        <p>Dalam komunikasi digital, penerapannya antara lain tidak mengirim pesan berulang secara mengganggu, tidak menggunakan huruf kapital seluruhnya untuk memarahi orang, tidak menghina berdasarkan identitas, tidak membagikan konten pribadi tanpa persetujuan, serta memeriksa informasi sebelum meneruskannya. Dalam diskusi, kritik sebaiknya diarahkan pada gagasan atau tindakan, bukan menyerang martabat pribadi.</p>
+        <p>Etiket digital bukan berarti semua perbedaan pendapat harus dihindari. Perbedaan pendapat justru dapat memperkaya diskusi jika disampaikan dengan alasan, data yang dapat diperiksa, dan bahasa yang tidak merendahkan. Tujuannya bukan membuat semua orang selalu sepakat, melainkan menjaga ruang diskusi tetap aman dan bermartabat.</p>
+      
+        <p class="source-note">Dasar materi: PDF Pertemuan 06, halaman 22. · Pengayaan: <a href="https://www.acm.org/code-of-ethics" target="_blank" rel="noopener noreferrer">ACM</a>, <a href="https://peraturan.bpk.go.id/Details/274494/uu-no-1-tahun-2024" target="_blank" rel="noopener noreferrer">UU ITE 2024</a></p>
+        <div class="subsection-conclusion"><span class="conclusion-label">KESIMPULAN SUBBAB</span><p>Norma kesopanan, kesusilaan, sosial, adat, dan hukum tetap menjadi acuan di ruang digital. Etiket digital diwujudkan melalui bahasa yang pantas, penghormatan terhadap perbedaan, dan perlindungan martabat orang lain.</p></div>
+      </div>
+    </section><section class="article-section" id="bagian-3">
+      <span class="section-index">03</span>
+      <div class="article-section-body">
+        <h2>Konten negatif dan pembentukan kebiasaan</h2>
+        
+        <p>Halaman 21 PDF menampilkan kekhawatiran bahwa konten negatif dapat membuat kebiasaan buruk terasa biasa. Ketika seseorang berulang kali melihat atau menerima perilaku yang merendahkan, kasar, atau tidak pantas, ia dapat mulai menganggapnya sebagai hal yang wajar. Kebiasaan yang awalnya dianggap menyimpang kemudian berisiko terbawa ke interaksi sehari-hari.</p>
+        <p>Hubungan tersebut bukan proses otomatis yang berlaku sama pada setiap orang. Namun, paparan berulang dapat memengaruhi cara seseorang memahami batas kepantasan, terutama jika konten itu mendapat banyak perhatian atau dianggap sebagai hiburan. Karena itu, pengguna perlu mengembangkan kemampuan memilah konten dan tidak ikut memperkuat penyebaran materi yang merugikan.</p>
+        <p>Contoh sederhana adalah meneruskan video yang mempermalukan seseorang hanya karena dianggap lucu. Tindakan itu dapat menambah jumlah penonton, memperpanjang rasa malu korban, dan membuat penghinaan terlihat seperti hiburan yang dapat diterima. Contoh lain adalah membagikan informasi yang belum diverifikasi sehingga rumor berkembang menjadi kesimpangsiuran yang lebih luas.</p>
+        <p>Langkah etisnya adalah berhenti sebelum meneruskan konten, memeriksa konteks dan sumber, mempertimbangkan apakah ada pihak yang dirugikan, serta menggunakan fitur pelaporan apabila konten melanggar aturan platform atau hukum. Pengguna juga dapat memilih untuk tidak mengikuti akun yang terus mendorong perilaku merugikan.</p>
+      
+        <p class="source-note">Dasar materi: PDF Pertemuan 06, halaman 21. · Pengayaan: <a href="https://www.acm.org/code-of-ethics" target="_blank" rel="noopener noreferrer">ACM</a></p>
+        <div class="subsection-conclusion"><span class="conclusion-label">KESIMPULAN SUBBAB</span><p>Konten negatif yang terus dinormalisasi dapat memengaruhi kebiasaan dan standar kepantasan. Pengguna perlu memilah, memeriksa, dan tidak ikut menyebarkan konten yang mempermalukan, merugikan, atau menyesatkan.</p></div>
+      </div>
+    </section><section class="article-section" id="bagian-4">
+      <span class="section-index">04</span>
+      <div class="article-section-body">
+        <h2>Reputasi, privasi, dan jejak digital</h2>
+        
+        <p>PDF mencontohkan etika di ruang nyata melalui sikap susila, menghargai orang lain, dan menghargai reputasi orang. Di internet, jejak digital dapat berupa unggahan, komentar, foto, rekaman, data profil, maupun tangkapan layar percakapan. Jejak tersebut dapat tersimpan atau disalin oleh pihak lain sehingga dampaknya mungkin berlangsung lebih lama daripada yang diperkirakan pengunggah.</p>
+        <p>Menghargai reputasi berarti tidak menyebarkan tuduhan yang belum terbukti, tidak memotong konteks percakapan untuk menyesatkan, dan tidak membuat akun palsu untuk merusak nama seseorang. Jika terjadi kesalahan, pengguna perlu melakukan koreksi secara terbuka dan tidak memperbesar penyebaran konten yang keliru. Menghargai privasi berarti meminta izin sebelum mengunggah foto, rekaman, atau informasi pribadi yang melibatkan orang lain.</p>
+        <p>Perlu diingat bahwa menghapus unggahan dari akun sendiri tidak selalu menghapus salinan yang telah diambil orang lain. Karena itu, tindakan pencegahan lebih baik daripada mengandalkan penghapusan setelah konten tersebar. Sebelum mengunggah, pertimbangkan siapa yang dapat melihatnya, apakah informasi itu sensitif, dan apakah pihak yang terlibat telah menyetujui publikasi tersebut.</p>
+      
+        <p class="source-note">Dasar materi: PDF Pertemuan 06, halaman 22. · Pengayaan: <a href="https://peraturan.bpk.go.id/Details/229798/uu-no-27-" target="_blank" rel="noopener noreferrer">UU PDP 2022</a>, <a href="https://www.acm.org/code-of-ethics" target="_blank" rel="noopener noreferrer">ACM</a></p>
+        <div class="subsection-conclusion"><span class="conclusion-label">KESIMPULAN SUBBAB</span><p>Reputasi dan privasi seseorang harus dihormati baik secara luring maupun daring. Karena jejak digital dapat disalin dan bertahan, pengguna perlu meminta izin, memeriksa kebenaran informasi, serta mempertimbangkan dampak sebelum mengunggah.</p></div>
+      </div>
+    </section><section class="article-section" id="bagian-5">
+      <span class="section-index">05</span>
+      <div class="article-section-body">
+        <h2>Norma hukum sebagai batas perilaku</h2>
+        
+        <p>Slide 22 menyebut bahwa norma hukum di dunia nyata tersebar dalam berbagai produk hukum, termasuk KUHP, KUHPer, dan undang-undang lainnya. Prinsip yang perlu dipahami adalah bahwa tindakan melalui media digital tetap dapat memiliki konsekuensi hukum. Internet bukan ruang tanpa aturan, dan anonimitas tidak menjadikan seseorang kebal dari pertanggungjawaban.</p>
+        <p>Untuk konteks Indonesia, pembahasan etika digital dapat dikaitkan dengan UU ITE yang telah mengalami perubahan, termasuk perubahan kedua melalui UU Nomor 1 Tahun 2024. Persoalan pemrosesan data pribadi juga berkaitan dengan UU Nomor 27 Tahun 2022, sedangkan penggunaan dan distribusi karya cipta digital perlu memperhatikan UU Nomor 28 Tahun 2014 tentang Hak Cipta.</p>
+        <p>Undang-undang tersebut memiliki ruang lingkup dan unsur hukum masing-masing. Tidak setiap perilaku yang tidak sopan otomatis merupakan tindak pidana, dan penentuan pelanggaran hukum harus melihat fakta, unsur aturan, serta proses yang berwenang. Namun, meskipun suatu tindakan tidak memenuhi unsur pidana, tindakan tersebut masih dapat dinilai tidak etis karena merugikan, tidak adil, atau melanggar norma sosial.</p>
+        <p>Oleh sebab itu, pengguna perlu membedakan penilaian etis dan penilaian hukum. Etika membantu membangun perilaku yang patut, sementara hukum menetapkan kewajiban dan larangan yang dapat ditegakkan melalui prosedur resmi.</p>
+      
+        <p class="source-note">Dasar materi: PDF Pertemuan 06, halaman 22. · Pengayaan: <a href="https://peraturan.bpk.go.id/Details/274494/uu-no-1-tahun-2024" target="_blank" rel="noopener noreferrer">UU ITE 2024</a>, <a href="https://peraturan.bpk.go.id/Details/229798/uu-no-27-" target="_blank" rel="noopener noreferrer">UU PDP 2022</a>, <a href="https://peraturan.bpk.go.id/Details/38690/uu-no-28-tahun-2014" target="_blank" rel="noopener noreferrer">UU Hak Cipta 2014</a></p>
+        <div class="subsection-conclusion"><span class="conclusion-label">KESIMPULAN SUBBAB</span><p>Norma hukum tetap berlaku di ruang digital, tetapi penilaian etis dan penilaian hukum tidak selalu sama. Pengguna perlu menghormati aturan yang relevan dan memahami bahwa penentuan pelanggaran hukum harus didasarkan pada fakta serta proses yang berwenang.</p></div>
+      </div>
+    </section></div></div>
+  <nav class="page-pagination" aria-label="Navigasi materi"><a href="perkembangan-cyberspace.html"><small>SEBELUMNYA</small><strong>← Perkembangan Cyberspace</strong></a><a class="next-page" href="kasus-kesimpulan.html"><small>SELANJUTNYA</small><strong>Kasus dan Penanganan →</strong></a></nav>
+</main><footer class="site-footer">
+      <div class="footer-main">
+        <div class="footer-brand-block"><span class="footer-mark">ED</span><div><strong>Etika di Era Teknologi Informasi</strong><p>Media pembelajaran · Kelompok 6 · PAI 1D</p></div></div>
+        <div class="footer-campus">UIN Siber Syekh Nurjati Cirebon</div>
+        <a class="footer-about-link" href="tentang-kami.html">Tentang pengembang <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="footer-bottom"><span>© 2026 Kelompok 6. Hak cipta konten dan pengembangan website dimiliki bersama oleh kelompok.</span><span>Gunakan teknologi secara bijak dan bertanggung jawab.</span></div>
+    </footer><button class="back-to-top" id="backToTop" type="button" aria-label="Kembali ke atas" title="Kembali ke atas"><span aria-hidden="true">↑</span></button></body></html>

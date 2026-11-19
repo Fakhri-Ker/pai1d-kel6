@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#007934"><meta name="description" content="Cyberethics membahas bagaimana manusia seharusnya bertindak ketika teknologi informasi menjadi bagian dari kehidupan sehari-hari. Pembahasannya tidak berhenti pada sopan santun di internet, tetapi juga mencakup privasi, kepemilikan, dampak sosial, kualitas sistem, dan tanggung jawab atas keputusan yang melibatkan teknologi."><title>Cyberethics (Etika Dunia Maya) | Etika Digital - Kelompok 6</title><script>
+  try {
+    if (sessionStorage.getItem('pai1dPageTransition') === '1') {
+      document.documentElement.classList.add('page-transition-in');
+      sessionStorage.removeItem('pai1dPageTransition');
+    }
+  } catch (error) {}
+</script>
+
+<script>
+/* Deteksi awal Welcome Screen sebelum halaman dirender agar tidak berkedip. */
+(function () {
+  var SIX_HOURS = 6 * 60 * 60 * 1000;
+  var LOCAL_KEY = 'pai1dEtikaDigitalLastVisit';
+  var SESSION_KEY = 'pai1dEtikaDigitalLastActivityInTab';
+  var WINDOW_TOKEN = '__PAI1D_WELCOME_LAST_ACTIVITY__=';
+
+  function readStorage(storage, key) {
+    try { return Number(storage.getItem(key) || 0); }
+    catch (error) { return 0; }
+  }
+
+  function readWindowTime() {
+    try {
+      var match = String(window.name || '').match(/(?:^|;)__PAI1D_WELCOME_LAST_ACTIVITY__=(\d+)/);
+      return match ? Number(match[1]) : 0;
+    } catch (error) { return 0; }
+  }
+
+  var last = Math.max(
+    readStorage(window.localStorage, LOCAL_KEY),
+    readStorage(window.sessionStorage, SESSION_KEY),
+    readWindowTime()
+  );
+  var recent = last > 0 && Date.now() >= last && Date.now() - last < SIX_HOURS;
+
+  if (recent) document.documentElement.classList.add('welcome-suppressed');
+})();
+</script>
+
+<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/responsive.css"><script src="js/main.js" defer></script><script src="js/welcome.js" defer></script></head>
+<body data-page="cyberethics">
+<div class="page-loader" id="pageLoader" aria-hidden="true">
+  <div class="skeleton-shell">
+    <div class="skeleton-header" aria-hidden="true">
+      <div class="skeleton-brand"><span class="skeleton-block skeleton-logo"></span><span class="skeleton-block skeleton-brand-name"></span></div>
+      <div class="skeleton-nav"><span class="skeleton-block"></span><span class="skeleton-block"></span><span class="skeleton-block"></span><span class="skeleton-block"></span></div>
+    </div>
+    <div class="skeleton-content" aria-hidden="true">
+      <span class="skeleton-block skeleton-eyebrow"></span>
+      <span class="skeleton-block skeleton-title"></span>
+      <span class="skeleton-block skeleton-title skeleton-title-short"></span>
+      <span class="skeleton-block skeleton-copy skeleton-copy-wide"></span>
+      <span class="skeleton-block skeleton-copy"></span>
+      <div class="skeleton-cards">
+        <div class="skeleton-card"><span class="skeleton-block skeleton-card-icon"></span><span class="skeleton-block skeleton-card-title"></span><span class="skeleton-block skeleton-card-line"></span><span class="skeleton-block skeleton-card-line skeleton-card-line-short"></span></div>
+        <div class="skeleton-card"><span class="skeleton-block skeleton-card-icon"></span><span class="skeleton-block skeleton-card-title"></span><span class="skeleton-block skeleton-card-line"></span><span class="skeleton-block skeleton-card-line skeleton-card-line-short"></span></div>
+        <div class="skeleton-card"><span class="skeleton-block skeleton-card-icon"></span><span class="skeleton-block skeleton-card-title"></span><span class="skeleton-block skeleton-card-line"></span><span class="skeleton-block skeleton-card-line skeleton-card-line-short"></span></div>
+      </div>
+    </div>
+    <span class="skeleton-sr-only">Memuat halaman berikutnya…</span>
+  </div>
+</div>
+<div class="welcome-screen" id="welcomeScreen" aria-labelledby="welcomeTitle" aria-modal="true" role="dialog">
+      <div class="welcome-panel">
+        <img class="welcome-logo" src="assets/foto/logo%20pai1d.png" alt="Logo PAI 1D" onerror="this.classList.add('logo-missing')">
+        <span class="eyebrow">MEDIA PEMBELAJARAN · KELOMPOK 6 · PAI 1D</span>
+        <h1 id="welcomeTitle">Etika di Era<br><span>Teknologi Informasi</span></h1>
+        <p class="welcome-description">Menjelajahi teknologi dengan pengetahuan, etika, dan tanggung jawab.</p>
+        <button class="button button-primary welcome-enter" id="enterWebsite" type="button">Masuk ke Website <span aria-hidden="true">→</span></button>
+        <p class="welcome-footnote">UIN Siber Syekh Nurjati Cirebon</p>
+      </div>
+    </div><header class="site-header">
+      <a class="brand" href="index.html" aria-label="Beranda Etika Digital">
+        <img class="brand-logo" src="assets/foto/logo%20pai1d.png" alt="Logo PAI 1D" onerror="this.classList.add('logo-missing')">
+        <span class="brand-name">Etika Digital</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Buka navigasi" aria-expanded="false" aria-controls="mainNav"><span></span><span></span><span></span></button>
+      <nav class="main-nav" id="mainNav" aria-label="Navigasi utama"><a class="nav-link " href="index.html">Beranda</a><a class="nav-link active" href="cyberethics.html">Cyberethics</a><a class="nav-link " href="prinsip-etika.html">Prinsip Etika</a><a class="nav-link " href="perkembangan-cyberspace.html">Perkembangan</a><a class="nav-link " href="real-space-cyber-space.html">Real = Cyber</a><a class="nav-link " href="kasus-kesimpulan.html">Kasus & Kesimpulan</a><a class="nav-link " href="tentang-kami.html">Tentang Kami</a></nav>
+    </header>
+<main class="article-main section-wrap">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Beranda</a><span>/</span><span>Cyberethics (Etika Dunia Maya)</span></nav>
+  <header class="article-hero"><span class="eyebrow">MATERI 01 · ETIKA DI ERA TEKNOLOGI INFORMASI · KELOMPOK 6</span><h1>Cyberethics (Etika Dunia Maya)</h1><h2>Memahami tanggung jawab moral, sosial, dan hukum dalam penggunaan teknologi informasi</h2><p>Cyberethics membahas bagaimana manusia seharusnya bertindak ketika teknologi informasi menjadi bagian dari kehidupan sehari-hari. Pembahasannya tidak berhenti pada sopan santun di internet, tetapi juga mencakup privasi, kepemilikan, dampak sosial, kualitas sistem, dan tanggung jawab atas keputusan yang melibatkan teknologi.</p></header>
+  <aside class="article-callout"><span class="callout-mark">✦</span><div><strong>Tujuan pembelajaran</strong><p>Menjelaskan pengertian Cyberethics, perkembangan isu etika digital, pendekatan etika terapan, serta komponen dasar sistem moral.</p><p class="callout-subtext">Pembahasan mengikuti susunan PDF Pertemuan 06 dan dilengkapi rujukan akademik, kode etik profesi, serta peraturan resmi yang relevan.</p></div></aside>
+  <div class="article-layout"><aside class="toc"><strong>Dalam halaman ini</strong><ol><li><a href="#bagian-1">Pengertian dan ruang lingkup Cyberethics</a></li><li><a href="#bagian-2">Empat fase perkembangan isu Cyberethics</a></li><li><a href="#bagian-3">Cyberethics sebagai etika terapan</a></li><li><a href="#bagian-4">Komponen dasar sistem moral</a></li></ol><div class="toc-note">Setiap subbab diakhiri kesimpulan singkat untuk menegaskan inti pembahasan.</div></aside><div class="article-content"><section class="article-section" id="bagian-1">
+      <span class="section-index">01</span>
+      <div class="article-section-body">
+        <h2>Pengertian dan ruang lingkup Cyberethics</h2>
+        
+        <p><strong>Cyberethics</strong> atau etika dunia maya adalah kajian mengenai persoalan moral, hukum, dan pengaruh sosial yang muncul sebagai akibat kemajuan teknologi informasi. Definisi dalam bahan kuliah merujuk pada Herman T. Tavani. Dengan kata lain, Cyberethics membantu kita menilai apakah suatu tindakan yang dilakukan melalui teknologi dapat dibenarkan, siapa yang mungkin terdampak, dan tanggung jawab apa yang melekat pada pengguna maupun pengembang teknologi.</p>
+        <p>Teknologi informasi perlu dipahami dalam arti luas. Cakupannya bukan hanya komputer meja atau laptop, melainkan juga perangkat genggam, komputer berskala besar, jaringan privat, dan internet. Karena itu, persoalan etika dapat muncul ketika seseorang memakai telepon pintar, menyimpan data pada layanan cloud, mengelola basis data pelanggan, mengembangkan aplikasi, atau berkomunikasi melalui media sosial.</p>
+        <p>Misalnya, mengunggah foto teman tanpa izin bukan sekadar persoalan fitur aplikasi. Tindakan tersebut menyangkut persetujuan, privasi, reputasi, dan kemungkinan dampak terhadap orang yang fotonya disebarkan. Demikian pula, membagikan perangkat lunak tanpa lisensi menyangkut hak pencipta dan aturan penggunaan karya. Cyberethics memberi kerangka untuk memahami dimensi-dimensi tersebut sebelum mengambil keputusan.</p>
+        <p>Dengan demikian, etika dunia maya berlaku bagi semua pihak: pengguna biasa, mahasiswa, pendidik, perusahaan, pengembang perangkat lunak, pengelola platform, dan lembaga publik. Semakin besar kemampuan teknologi untuk mengumpulkan, mengolah, dan menyebarkan informasi, semakin besar pula kebutuhan untuk mempertimbangkan akibat penggunaannya.</p>
+      
+        <p class="source-note">Dasar materi: PDF Pertemuan 06, halaman 5. · Pengayaan: <a href="https://elmhurst.ecampus.com/ethics-technology-ethical-issues-age/bk/9780471998037" target="_blank" rel="noopener noreferrer">Tavani</a></p>
+        <div class="subsection-conclusion"><span class="conclusion-label">KESIMPULAN SUBBAB</span><p>Cyberethics adalah kajian etis atas dampak moral, hukum, dan sosial teknologi informasi. Ruang lingkupnya meliputi seluruh perangkat dan jaringan digital, sehingga setiap pengguna dan pengelola teknologi memiliki tanggung jawab terhadap tindakan serta dampaknya.</p></div>
+      </div>
+    </section><section class="article-section" id="bagian-2">
+      <span class="section-index">02</span>
+      <div class="article-section-body">
+        <h2>Empat fase perkembangan isu Cyberethics</h2>
+        
+        <p>PDF Pertemuan 06 membagi perkembangan isu Cyberethics ke dalam empat fase. Pembagian ini memperlihatkan bahwa setiap perubahan teknologi menghadirkan persoalan etika baru, sementara sebagian persoalan lama tetap berlanjut. Batas periode di bawah merupakan periodisasi pembelajaran; fase-fase tersebut tidak selalu terpisah secara mutlak.</p>
+        <div class="table-wrap"><table class="phase-table"><thead><tr><th>Fase</th><th>Periode</th><th>Perkembangan teknologi</th><th>Isu yang menonjol</th></tr></thead><tbody>
+          <tr><td>1</td><td>1950–1960-an</td><td>Mesin mandiri dan mainframe</td><td>Kecerdasan buatan serta privasi basis data.</td></tr>
+          <tr><td>2</td><td>1970–1980-an</td><td>Minikomputer dan PC yang terhubung melalui jaringan privat</td><td>Hak kekayaan intelektual, pembajakan perangkat lunak, kejahatan komputer, dan privasi komunikasi.</td></tr>
+          <tr><td>3</td><td>1990-an hingga era internet dan web</td><td>Internet dan World Wide Web</td><td>Kebebasan berekspresi, anonimitas, yurisdiksi hukum, serta komunitas virtual.</td></tr>
+          <tr><td>4</td><td>Sekarang dan masa depan</td><td>Konvergensi TIK dengan teknologi biologi dan nano</td><td>Agen elektronik atau bot yang dapat mengambil keputusan, nanokomputasi, bioinformatika, dan genomika komputasional.</td></tr>
+        </tbody></table></div>
+        <p>Pada fase awal, isu yang muncul berkaitan dengan komputer dan data yang dikelola secara terpusat. Ketika komputer pribadi dan jaringan berkembang, salinan perangkat lunak dan komunikasi elektronik menimbulkan pertanyaan baru tentang kepemilikan dan kerahasiaan. Kehadiran internet memperluas jangkauan interaksi: pesan dapat menyebar lintas negara, identitas pengguna dapat disamarkan, dan perbedaan hukum antarwilayah menjadi tantangan.</p>
+        <p>Fase keempat menunjukkan bahwa persoalan etika akan semakin kompleks ketika sistem dapat bertindak secara otomatis atau mengolah informasi biologis. Bot yang membuat keputusan, misalnya, menimbulkan pertanyaan tentang transparansi, kendali manusia, dan pihak yang harus bertanggung jawab apabila keputusan tersebut merugikan seseorang.</p>
+      
+        <p class="source-note">Dasar materi: PDF Pertemuan 06, halaman 6. · Pengayaan: <a href="https://elmhurst.ecampus.com/ethics-technology-ethical-issues-age/bk/9780471998037" target="_blank" rel="noopener noreferrer">Tavani</a></p>
+        <div class="subsection-conclusion"><span class="conclusion-label">KESIMPULAN SUBBAB</span><p>Empat fase Cyberethics menunjukkan hubungan antara perubahan teknologi dan perubahan persoalan etika. Teknologi baru tidak menghapus isu lama, tetapi menambah tantangan seperti anonimitas, yurisdiksi, keputusan otomatis, dan penggunaan data yang semakin kompleks.</p></div>
+      </div>
+    </section><section class="article-section" id="bagian-3">
+      <span class="section-index">03</span>
+      <div class="article-section-body">
+        <h2>Cyberethics sebagai etika terapan</h2>
+        
+        <p>Cyberethics termasuk dalam ranah <em>applied ethics</em> atau etika terapan, yaitu penggunaan pemikiran etis untuk menilai persoalan konkret. Bahan kuliah memperlihatkan tiga sudut pandang yang dapat digunakan untuk membahasnya.</p>
+        <h3>1. Etika profesional</h3>
+        <p>Sudut pandang ini menyoroti kewajiban orang yang bekerja di bidang komputasi dan teknologi informasi. Contohnya, pengembang harus menguji keamanan aplikasi, menjaga kerahasiaan data yang dipercayakan kepadanya, tidak menyalahgunakan akses, dan menjelaskan risiko sistem secara jujur. Tanggung jawab profesional tidak selesai ketika perangkat lunak berhasil berjalan; kualitas dan dampaknya bagi pengguna juga harus diperhatikan.</p>
+        <h3>2. Etika filosofis</h3>
+        <p>Pendekatan filosofis membantu menjelaskan alasan di balik penilaian moral. Pertanyaan seperti “apakah tindakan ini adil?”, “siapa yang memperoleh manfaat?”, dan “apakah ada pihak yang dirugikan?” dapat dianalisis dengan prinsip keadilan, kemanfaatan sosial, kewajiban, dan penghormatan terhadap manusia. Pendekatan ini juga membantu masyarakat mempertimbangkan bagaimana teknologi memengaruhi norma sosial dan kebijakan publik.</p>
+        <h3>3. Etika deskriptif dan normatif</h3>
+        <p>Etika deskriptif menjelaskan apa yang terjadi: kebiasaan, keyakinan, dan perilaku yang benar-benar ditemukan dalam masyarakat. Etika normatif membahas apa yang seharusnya dilakukan dan standar apa yang layak digunakan untuk menilai tindakan. Pembedaan ini penting karena sesuatu yang sering dilakukan di internet belum tentu benar secara moral. Popularitas suatu kebiasaan tidak otomatis menjadikannya patut.</p>
+        <p>Dalam pembahasan normatif, bahan kuliah juga membedakan penilaian moral dan nonmoral. Penilaian moral berkaitan dengan keadilan, kewajiban, benar-salah, dan dampak terhadap orang lain. Penilaian nonmoral dapat menyangkut standar teknis atau estetis, misalnya apakah sebuah tampilan aplikasi mudah digunakan. Keduanya dapat berhubungan, tetapi tidak boleh disamakan.</p>
+      
+        <p class="source-note">Dasar materi: PDF Pertemuan 06, halaman 7. · Pengayaan: <a href="https://elmhurst.ecampus.com/ethics-technology-ethical-issues-age/bk/9780471998037" target="_blank" rel="noopener noreferrer">Tavani</a>, <a href="https://www.acm.org/code-of-ethics" target="_blank" rel="noopener noreferrer">ACM</a></p>
+        <div class="subsection-conclusion"><span class="conclusion-label">KESIMPULAN SUBBAB</span><p>Etika terapan dapat dilihat dari tanggung jawab profesional, penalaran filosofis, dan pengamatan terhadap perilaku nyata. Kebiasaan yang umum terjadi perlu tetap diuji secara normatif: apakah adil, tidak merugikan, dan menghormati hak orang lain.</p></div>
+      </div>
+    </section><section class="article-section" id="bagian-4">
+      <span class="section-index">04</span>
+      <div class="article-section-body">
+        <h2>Komponen dasar sistem moral</h2>
+        
+        <p>Untuk menilai tindakan secara konsisten, kita memerlukan sistem moral. PDF Pertemuan 06 menjelaskan dua komponen pokok: <strong>aturan perilaku</strong> dan <strong>prinsip evaluasi</strong>. Aturan perilaku memberi panduan tentang apa yang boleh atau tidak boleh dilakukan, sedangkan prinsip evaluasi memberi alasan untuk membenarkan atau menilai aturan tersebut.</p>
+        <h3>Aturan perilaku pada tingkat individu dan sosial</h3>
+        <p>Aturan pada tingkat mikro mengarahkan tindakan individu. Contohnya, tidak mencuri, tidak menyakiti orang lain, tidak mengambil alih akun orang lain, dan tidak menyebarkan informasi pribadi tanpa hak. Aturan pada tingkat makro menjadi dasar kebijakan sosial atau organisasi. Contohnya, organisasi harus melindungi perangkat lunak yang digunakan dan menetapkan kebijakan untuk menjaga privasi pelanggan.</p>
+        <h3>Prinsip evaluasi dan nilai inti</h3>
+        <p>Prinsip evaluasi membantu menjawab mengapa suatu aturan perlu ditaati. Bahan kuliah memberi contoh kemanfaatan sosial (<em>social utility</em>) dan keadilan sebagai kewajaran (<em>justice as fairness</em>). Kemanfaatan sosial mempertimbangkan apakah keputusan membawa manfaat dan mengurangi kerugian bagi masyarakat. Keadilan mempertimbangkan apakah hak, kesempatan, dan beban dibagikan secara patut.</p>
+        <p>Nilai inti atau <em>core values</em> menjadi sumber bagi pembentukan aturan moral. Dalam diagram PDF, dasar justifikasi prinsip moral dapat berasal dari agama, etika filosofis, dan hukum. Ketiganya dapat memberi landasan yang saling melengkapi. Namun, sesuatu yang belum diatur secara rinci oleh hukum tetap dapat menimbulkan pertanyaan moral, misalnya apakah pantas menyebarkan percakapan pribadi yang diperoleh secara tidak sengaja.</p>
+      
+        <p class="source-note">Dasar materi: PDF Pertemuan 06, halaman 8–9. · Pengayaan: <a href="https://elmhurst.ecampus.com/ethics-technology-ethical-issues-age/bk/9780471998037" target="_blank" rel="noopener noreferrer">Tavani</a></p>
+        <div class="subsection-conclusion"><span class="conclusion-label">KESIMPULAN SUBBAB</span><p>Sistem moral memerlukan aturan yang mengarahkan tindakan dan prinsip yang menjelaskan alasan di balik aturan tersebut. Nilai inti, keadilan, dan kemanfaatan sosial membantu pengguna menilai keputusan digital secara lebih bertanggung jawab.</p></div>
+      </div>
+    </section></div></div>
+  <nav class="page-pagination" aria-label="Navigasi materi"><a href="index.html"><small>SEBELUMNYA</small><strong>← Beranda</strong></a><a class="next-page" href="prinsip-etika.html"><small>SELANJUTNYA</small><strong>Prinsip dan Dimensi Etika →</strong></a></nav>
+</main><footer class="site-footer">
+      <div class="footer-main">
+        <div class="footer-brand-block"><span class="footer-mark">ED</span><div><strong>Etika di Era Teknologi Informasi</strong><p>Media pembelajaran · Kelompok 6 · PAI 1D</p></div></div>
+        <div class="footer-campus">UIN Siber Syekh Nurjati Cirebon</div>
+        <a class="footer-about-link" href="tentang-kami.html">Tentang pengembang <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="footer-bottom"><span>© 2026 Kelompok 6. Hak cipta konten dan pengembangan website dimiliki bersama oleh kelompok.</span><span>Gunakan teknologi secara bijak dan bertanggung jawab.</span></div>
+    </footer><button class="back-to-top" id="backToTop" type="button" aria-label="Kembali ke atas" title="Kembali ke atas"><span aria-hidden="true">↑</span></button></body></html>

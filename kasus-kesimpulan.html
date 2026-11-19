@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#007934"><meta name="description" content="Bagian ini menghubungkan konsep etika digital dengan bentuk kejahatan komputer, contoh kasus, serta langkah penanganan. PDF Pertemuan 06 membedakan kejahatan yang menjadikan komputer atau sistem sebagai sasaran dan kejahatan yang menggunakan komputer sebagai alat; penjelasan berikut mengembangkan kerangka tersebut dengan contoh dan rujukan resmi."><title>Kasus, Penanganan, dan Kesimpulan | Etika Digital - Kelompok 6</title><script>
+  try {
+    if (sessionStorage.getItem('pai1dPageTransition') === '1') {
+      document.documentElement.classList.add('page-transition-in');
+      sessionStorage.removeItem('pai1dPageTransition');
+    }
+  } catch (error) {}
+</script>
+
+<script>
+/* Deteksi awal Welcome Screen sebelum halaman dirender agar tidak berkedip. */
+(function () {
+  var SIX_HOURS = 6 * 60 * 60 * 1000;
+  var LOCAL_KEY = 'pai1dEtikaDigitalLastVisit';
+  var SESSION_KEY = 'pai1dEtikaDigitalLastActivityInTab';
+  var WINDOW_TOKEN = '__PAI1D_WELCOME_LAST_ACTIVITY__=';
+
+  function readStorage(storage, key) {
+    try { return Number(storage.getItem(key) || 0); }
+    catch (error) { return 0; }
+  }
+
+  function readWindowTime() {
+    try {
+      var match = String(window.name || '').match(/(?:^|;)__PAI1D_WELCOME_LAST_ACTIVITY__=(\d+)/);
+      return match ? Number(match[1]) : 0;
+    } catch (error) { return 0; }
+  }
+
+  var last = Math.max(
+    readStorage(window.localStorage, LOCAL_KEY),
+    readStorage(window.sessionStorage, SESSION_KEY),
+    readWindowTime()
+  );
+  var recent = last > 0 && Date.now() >= last && Date.now() - last < SIX_HOURS;
+
+  if (recent) document.documentElement.classList.add('welcome-suppressed');
+})();
+</script>
+
+<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/responsive.css"><script src="js/main.js" defer></script><script src="js/welcome.js" defer></script></head>
+<body data-page="kasus">
+<div class="page-loader" id="pageLoader" aria-hidden="true">
+  <div class="skeleton-shell">
+    <div class="skeleton-header" aria-hidden="true">
+      <div class="skeleton-brand"><span class="skeleton-block skeleton-logo"></span><span class="skeleton-block skeleton-brand-name"></span></div>
+      <div class="skeleton-nav"><span class="skeleton-block"></span><span class="skeleton-block"></span><span class="skeleton-block"></span><span class="skeleton-block"></span></div>
+    </div>
+    <div class="skeleton-content" aria-hidden="true">
+      <span class="skeleton-block skeleton-eyebrow"></span>
+      <span class="skeleton-block skeleton-title"></span>
+      <span class="skeleton-block skeleton-title skeleton-title-short"></span>
+      <span class="skeleton-block skeleton-copy skeleton-copy-wide"></span>
+      <span class="skeleton-block skeleton-copy"></span>
+      <div class="skeleton-cards">
+        <div class="skeleton-card"><span class="skeleton-block skeleton-card-icon"></span><span class="skeleton-block skeleton-card-title"></span><span class="skeleton-block skeleton-card-line"></span><span class="skeleton-block skeleton-card-line skeleton-card-line-short"></span></div>
+        <div class="skeleton-card"><span class="skeleton-block skeleton-card-icon"></span><span class="skeleton-block skeleton-card-title"></span><span class="skeleton-block skeleton-card-line"></span><span class="skeleton-block skeleton-card-line skeleton-card-line-short"></span></div>
+        <div class="skeleton-card"><span class="skeleton-block skeleton-card-icon"></span><span class="skeleton-block skeleton-card-title"></span><span class="skeleton-block skeleton-card-line"></span><span class="skeleton-block skeleton-card-line skeleton-card-line-short"></span></div>
+      </div>
+    </div>
+    <span class="skeleton-sr-only">Memuat halaman berikutnya…</span>
+  </div>
+</div>
+<div class="welcome-screen" id="welcomeScreen" aria-labelledby="welcomeTitle" aria-modal="true" role="dialog">
+      <div class="welcome-panel">
+        <img class="welcome-logo" src="assets/foto/logo%20pai1d.png" alt="Logo PAI 1D" onerror="this.classList.add('logo-missing')">
+        <span class="eyebrow">MEDIA PEMBELAJARAN · KELOMPOK 6 · PAI 1D</span>
+        <h1 id="welcomeTitle">Etika di Era<br><span>Teknologi Informasi</span></h1>
+        <p class="welcome-description">Menjelajahi teknologi dengan pengetahuan, etika, dan tanggung jawab.</p>
+        <button class="button button-primary welcome-enter" id="enterWebsite" type="button">Masuk ke Website <span aria-hidden="true">→</span></button>
+        <p class="welcome-footnote">UIN Siber Syekh Nurjati Cirebon</p>
+      </div>
+    </div><header class="site-header">
+      <a class="brand" href="index.html" aria-label="Beranda Etika Digital">
+        <img class="brand-logo" src="assets/foto/logo%20pai1d.png" alt="Logo PAI 1D" onerror="this.classList.add('logo-missing')">
+        <span class="brand-name">Etika Digital</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Buka navigasi" aria-expanded="false" aria-controls="mainNav"><span></span><span></span><span></span></button>
+      <nav class="main-nav" id="mainNav" aria-label="Navigasi utama"><a class="nav-link " href="index.html">Beranda</a><a class="nav-link " href="cyberethics.html">Cyberethics</a><a class="nav-link " href="prinsip-etika.html">Prinsip Etika</a><a class="nav-link " href="perkembangan-cyberspace.html">Perkembangan</a><a class="nav-link " href="real-space-cyber-space.html">Real = Cyber</a><a class="nav-link active" href="kasus-kesimpulan.html">Kasus & Kesimpulan</a><a class="nav-link " href="tentang-kami.html">Tentang Kami</a></nav>
+    </header>
+<main class="article-main section-wrap">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Beranda</a><span>/</span><span>Kasus, Penanganan, dan Kesimpulan</span></nav>
+  <header class="article-hero"><span class="eyebrow">MATERI 05 · ETIKA DI ERA TEKNOLOGI INFORMASI · KELOMPOK 6</span><h1>Kasus, Penanganan, dan Kesimpulan</h1><h2>Mengenali bentuk kejahatan digital dan meresponsnya secara bertanggung jawab</h2><p>Bagian ini menghubungkan konsep etika digital dengan bentuk kejahatan komputer, contoh kasus, serta langkah penanganan. PDF Pertemuan 06 membedakan kejahatan yang menjadikan komputer atau sistem sebagai sasaran dan kejahatan yang menggunakan komputer sebagai alat; penjelasan berikut mengembangkan kerangka tersebut dengan contoh dan rujukan resmi.</p></header>
+  <aside class="article-callout"><span class="callout-mark">✦</span><div><strong>Tujuan pembelajaran</strong><p>Membedakan jenis kejahatan komputer, menganalisis dampaknya, memahami langkah awal penanganan insiden, dan mengenali peran bukti elektronik serta aturan yang relevan.</p><p class="callout-subtext">Pembahasan mengikuti susunan PDF Pertemuan 06 dan dilengkapi rujukan akademik, kode etik profesi, serta peraturan resmi yang relevan.</p></div></aside>
+  <div class="article-layout"><aside class="toc"><strong>Dalam halaman ini</strong><ol><li><a href="#bagian-1">Dua kelompok kejahatan komputer</a></li><li><a href="#bagian-2">Contoh kasus: penipuan dengan bukti transfer palsu</a></li><li><a href="#bagian-3">Phishing dan pencurian informasi</a></li><li><a href="#bagian-4">Tahapan penanganan insiden siber</a></li><li><a href="#bagian-5">Langkah awal bagi pengguna dan pelestarian bukti digital</a></li><li><a href="#bagian-6">Bukti elektronik, hukum, dan kesimpulan akhir</a></li></ol><div class="toc-note">Setiap subbab diakhiri kesimpulan singkat untuk menegaskan inti pembahasan.</div></aside><div class="article-content"><section class="article-section" id="bagian-1">
+      <span class="section-index">01</span>
+      <div class="article-section-body">
+        <h2>Dua kelompok kejahatan komputer</h2>
+        
+        <p>PDF Pertemuan 06 menjelaskan bahwa kejahatan komputer merupakan kegiatan yang bersifat melawan hukum dan secara umum dapat dibagi menjadi dua kelompok berdasarkan peran teknologi dalam peristiwa tersebut.</p>
+        <h3>1. Komputer atau sistem menjadi sasaran</h3>
+        <p>Pada kelompok ini, pelaku menyerang komputer, sistem elektronik, atau informasi elektronik itu sendiri. Contohnya adalah serangan virus atau malware, perusakan layanan, dan akses tanpa izin yang bertujuan menguasai atau mengganggu sistem. Dampaknya dapat berupa sistem tidak dapat digunakan, data rusak, informasi bocor, atau layanan publik dan bisnis terhenti.</p>
+        <h3>2. Komputer menjadi alat atau sarana</h3>
+        <p>Pada kelompok ini, teknologi digunakan untuk membantu melakukan kejahatan. Contohnya pencurian data, penipuan, ancaman, pemerasan, penyamaran identitas, dan penyebaran konten yang melanggar hukum. Kejahatan tradisional dapat memanfaatkan sistem elektronik untuk menjangkau korban lebih luas, berkomunikasi secara cepat, atau menyamarkan identitas pelaku.</p>
+        <p>Dalam praktiknya, dua kelompok tersebut dapat saling berhubungan. Penipuan dapat diawali dengan pengambilalihan akun, sedangkan pencurian data dapat menjadi sarana untuk melakukan pemerasan atau penipuan berikutnya. Karena itu, klasifikasi ini membantu memahami peran teknologi, tetapi tidak selalu membatasi suatu kasus hanya pada satu jenis tindakan.</p>
+        <p>PDF juga menjelaskan perubahan istilah dari <em>computer crime</em> menjadi <em>internet crime</em> dan kemudian <em>cybercrime</em>. Perubahan istilah ini mencerminkan meluasnya penggunaan jaringan dan sistem elektronik dalam aktivitas yang melawan hukum.</p>
+      
+        <p class="source-note">Dasar materi: PDF Pertemuan 06, halaman 26–27. · Pengayaan: <a href="https://peraturan.bpk.go.id/Details/274494/uu-no-1-tahun-2024" target="_blank" rel="noopener noreferrer">UU ITE 2024</a></p>
+        <div class="subsection-conclusion"><span class="conclusion-label">KESIMPULAN SUBBAB</span><p>Kejahatan komputer dapat menyerang sistem sebagai sasaran atau memanfaatkan komputer sebagai alat. Klasifikasi ini membantu mengenali bentuk ancaman, memahami dampak, dan menentukan pihak yang perlu dilibatkan dalam penanganan.</p></div>
+      </div>
+    </section><section class="article-section" id="bagian-2">
+      <span class="section-index">02</span>
+      <div class="article-section-body">
+        <h2>Contoh kasus: penipuan dengan bukti transfer palsu</h2>
+        
+        <p>Sebagai pengayaan dari materi, salah satu contoh kasus yang diberitakan Tribratanews Polda Jawa Barat pada 13 Juni 2025 adalah penipuan daring dengan modus bukti transfer palsu di Cianjur. Dalam pemberitaan tersebut, pemilik sebuah toko dilaporkan mengalami kerugian sekitar Rp86,3 juta selama periode Desember 2024 hingga Mei 2025. Pelaku memanipulasi bukti transfer OVO Cash menggunakan aplikasi pengedit gambar dengan mengubah nominal, tanggal, dan jam transaksi agar tampak sesuai dengan pembayaran barang.</p>
+        <p>Kasus ini memperlihatkan bagaimana komputer atau telepon pintar dapat digunakan sebagai sarana untuk memanipulasi informasi dan meyakinkan korban. Dampaknya bukan hanya kerugian keuangan, tetapi juga hilangnya kepercayaan dalam transaksi daring. Bukti digital seperti gambar transfer, percakapan, catatan penjualan, dan data transaksi dapat membantu proses pemeriksaan apabila disimpan dengan baik.</p>
+        <p>Pelajaran praktis yang disampaikan kepolisian dalam berita tersebut adalah jangan hanya mengandalkan gambar bukti transfer. Penjual perlu memeriksa mutasi atau saldo melalui aplikasi dan kanal resmi miliknya sendiri, serta memastikan dana benar-benar masuk sebelum menyerahkan barang. Prinsip ini juga berlaku untuk transaksi lain: verifikasi melalui sumber resmi, bukan melalui tangkapan layar yang dikirim pihak yang berkepentingan.</p>
+        <p>Contoh tersebut merupakan kasus nyata yang diberitakan oleh kepolisian, bukan kasus yang tercantum secara rinci dalam PDF. Kasus ini ditambahkan untuk memperjelas kategori kejahatan yang menggunakan komputer sebagai alat dan menunjukkan bagaimana konsep etika diterapkan pada transaksi sehari-hari.</p>
+        {note('Pelajaran dari kasus', 'Jangan menyamakan tampilan bukti digital dengan kepastian transaksi. Periksa dana melalui akun atau aplikasi resmi milik penerima, simpan catatan transaksi, dan jangan menyerahkan barang hanya berdasarkan gambar bukti pembayaran.', 'case-note')}
+      
+        <p class="source-note">Dasar materi: PDF Pertemuan 06, halaman 26–27 sebagai dasar klasifikasi; contoh kasus merupakan pengayaan dari berita Polda Jabar 2025. · Pengayaan: <a href="https://tribratanews.jabar.polri.go.id/polres-cianjur-ringkus-pelaku-penipuan-online-modus-bukti-transfer-palsu/" target="_blank" rel="noopener noreferrer">Polda Jabar 2025</a>, <a href="https://peraturan.bpk.go.id/Details/274494/uu-no-1-tahun-2024" target="_blank" rel="noopener noreferrer">UU ITE 2024</a></p>
+        <div class="subsection-conclusion"><span class="conclusion-label">KESIMPULAN SUBBAB</span><p>Bukti transfer palsu menunjukkan bahwa manipulasi konten digital dapat digunakan untuk melakukan penipuan. Verifikasi transaksi harus dilakukan melalui kanal resmi penerima, sementara bukti dan catatan transaksi perlu disimpan untuk membantu penanganan.</p></div>
+      </div>
+    </section><section class="article-section" id="bagian-3">
+      <span class="section-index">03</span>
+      <div class="article-section-body">
+        <h2>Phishing dan pencurian informasi</h2>
+        
+        <p><em>Phishing</em> adalah upaya menipu seseorang agar membuka tautan atau memasukkan kredensial seperti nama pengguna dan kata sandi pada halaman palsu. Panduan BSSN menjelaskan bahwa phishing dapat dilakukan melalui email yang mengatasnamakan administrator atau melalui situs web palsu yang tampilannya dibuat menyerupai situs asli. Modus ini memanfaatkan kepercayaan dan kelengahan korban.</p>
+        <p>Pesan phishing sering dibuat seolah-olah berasal dari bank, layanan pengiriman, kampus, penyedia akun, atau lembaga resmi. Pesan dapat menimbulkan rasa mendesak, misalnya menyatakan akun akan diblokir atau paket tidak dapat dikirim jika penerima tidak segera mengeklik tautan. Tujuannya adalah membuat korban bertindak sebelum memeriksa alamat situs dan keaslian pengirim.</p>
+        <p>Jika kredensial berhasil diperoleh, pelaku dapat mencoba masuk ke akun korban, mengubah informasi pemulihan, mengambil alih akun, atau menggunakan data untuk penipuan lanjutan. Oleh sebab itu, pengguna tidak boleh memberikan kata sandi, PIN, atau kode OTP kepada pihak yang menghubungi secara tiba-tiba. Alamat situs perlu diperiksa dengan teliti dan akses sebaiknya dilakukan melalui aplikasi atau alamat resmi yang diketik sendiri.</p>
+        <p>Panduan BSSN menekankan persiapan, identifikasi, pengumpulan bukti, pencegahan dampak yang lebih luas, dan tindak lanjut. Untuk organisasi, penanganan juga melibatkan pengelola sistem, penyedia layanan, serta tim tanggap insiden yang relevan.</p>
+      
+        <p class="source-note">Dasar materi: PDF Pertemuan 06, halaman 25–27 sebagai konteks karakteristik internet dan kejahatan; pengayaan Panduan BSSN 2018. · Pengayaan: <a href="https://csirt.polri.go.id/storage/uploads-guidances/Panduan-Penanganan-Insiden-Serangan-Phishing.pdf" target="_blank" rel="noopener noreferrer">Panduan BSSN</a>, <a href="https://peraturan.bpk.go.id/Details/229798/uu-no-27-" target="_blank" rel="noopener noreferrer">UU PDP 2022</a></p>
+        <div class="subsection-conclusion"><span class="conclusion-label">KESIMPULAN SUBBAB</span><p>Phishing memanfaatkan penyamaran dan tekanan agar korban menyerahkan kredensial. Pengguna perlu memeriksa pengirim dan alamat situs, tidak membagikan kode rahasia, serta segera mengamankan akun jika terlanjur memberikan informasi.</p></div>
+      </div>
+    </section><section class="article-section" id="bagian-4">
+      <span class="section-index">04</span>
+      <div class="article-section-body">
+        <h2>Tahapan penanganan insiden siber</h2>
+        
+        <p>Penanganan insiden perlu dilakukan secara teratur agar dampak tidak meluas dan bukti tidak hilang. Panduan BSSN tentang penanganan serangan phishing membagi proses organisasi ke dalam enam tahap. Tahap-tahap ini dapat menjadi kerangka umum, meskipun tindakan teknis yang tepat harus disesuaikan dengan jenis insiden dan kemampuan pihak yang menangani.</p>
+        <div class="response-steps">
+          <article><span>01</span><div><strong>Persiapan</strong><p>Menetapkan prosedur, kontak pihak terkait, dan informasi layanan resmi; meningkatkan kesadaran pengguna agar tidak mudah mengeklik tautan mencurigakan.</p></div></article>
+          <article><span>02</span><div><strong>Identifikasi dan analisis</strong><p>Memastikan apakah insiden terjadi, mengenali ruang lingkupnya, memeriksa pesan atau tautan, serta mengumpulkan bukti seperti tangkapan layar dan catatan sistem.</p></div></article>
+          <article><span>03</span><div><strong>Containment atau pembatasan dampak</strong><p>Mengurangi kemungkinan kerusakan lanjutan, memberi peringatan kepada pengguna, dan membatasi akses atau aktivitas yang terindikasi disalahgunakan.</p></div></article>
+          <article><span>04</span><div><strong>Eradication atau penghapusan ancaman</strong><p>Menghentikan sumber serangan, misalnya menghubungi pengelola situs atau penyedia hosting untuk menindaklanjuti halaman palsu dan memperbaiki sistem yang terdampak.</p></div></article>
+          <article><span>05</span><div><strong>Pemulihan</strong><p>Mengembalikan sistem atau akun ke kondisi aman, memeriksa bahwa ancaman telah ditangani, dan tetap memantau kemungkinan serangan berulang.</p></div></article>
+          <article><span>06</span><div><strong>Tindak lanjut</strong><p>Mendokumentasikan langkah dan hasil penanganan, membuat laporan, mengevaluasi kelemahan, serta memperbaiki prosedur agar insiden serupa lebih mudah dicegah.</p></div></article>
+        </div>
+        <p>Urutan tersebut menekankan bahwa penanganan bukan hanya menghapus pesan atau mengganti kata sandi. Organisasi juga perlu memahami sumber masalah, membatasi dampak, memulihkan layanan, dan mengambil pelajaran dari insiden. Dokumentasi menjadi penting agar tindakan yang dilakukan dapat ditinjau dan dipertanggungjawabkan.</p>
+      
+        <p class="source-note">Dasar materi: PDF Pertemuan 06, halaman 26–27 sebagai dasar isu cybercrime; pengayaan Panduan BSSN 2018, bagian 4.1–4.6. · Pengayaan: <a href="https://csirt.polri.go.id/storage/uploads-guidances/Panduan-Penanganan-Insiden-Serangan-Phishing.pdf" target="_blank" rel="noopener noreferrer">Panduan BSSN</a></p>
+        <div class="subsection-conclusion"><span class="conclusion-label">KESIMPULAN SUBBAB</span><p>Penanganan insiden berjalan dari persiapan hingga evaluasi. Identifikasi dan pengumpulan bukti perlu dilakukan bersama pembatasan dampak, penghapusan ancaman, pemulihan, serta tindak lanjut agar masalah tidak berulang.</p></div>
+      </div>
+    </section><section class="article-section" id="bagian-5">
+      <span class="section-index">05</span>
+      <div class="article-section-body">
+        <h2>Langkah awal bagi pengguna dan pelestarian bukti digital</h2>
+        
+        <p>Jika seseorang menjadi korban atau menemukan indikasi kejahatan digital, langkah pertama adalah menghentikan interaksi yang mencurigakan. Jangan mengeklik tautan lanjutan, mengirim uang tambahan, atau memberikan kode OTP. Jika akun mungkin telah diambil alih, gunakan perangkat yang aman untuk mengganti kata sandi, keluarkan sesi atau perangkat yang tidak dikenal, aktifkan autentikasi multifaktor, dan hubungi penyedia layanan melalui kanal resmi.</p>
+        <p>Bukti digital perlu disimpan dengan tertib. Simpan pesan asli, alamat email atau nomor pengirim, URL, tanggal dan waktu, tangkapan layar, nomor transaksi, bukti transfer, serta kronologi kejadian. Jangan mengedit file asli atau menghapus percakapan yang mungkin dibutuhkan. Jika perlu membuat salinan untuk dibagikan, simpan salinan tersebut terpisah dan tetap pertahankan file asli. Hindari menyebarkan bukti ke media sosial karena dapat membuka data pribadi atau mengganggu pemeriksaan.</p>
+        <p>Untuk penipuan yang melibatkan rekening atau dompet digital, segera hubungi bank atau penyedia pembayaran melalui kanal resmi untuk meminta arahan pengamanan dan pelaporan. Laporkan akun atau konten mencurigakan kepada platform. Jika terdapat dugaan tindak pidana, buat laporan kepada aparat penegak hukum melalui saluran resmi dan sertakan kronologi serta bukti yang tersedia. Organisasi yang mengalami insiden teknis perlu melibatkan tim keamanan atau CSIRT yang menaunginya.</p>
+        <p>Langkah-langkah ini merupakan panduan awal, bukan pengganti pemeriksaan forensik digital atau nasihat hukum. Dalam insiden serius, jangan melakukan eksperimen sendiri pada perangkat atau sistem yang menjadi bukti; minta bantuan petugas atau tenaga ahli yang berwenang.</p>
+      
+        <p class="source-note">Dasar materi: PDF Pertemuan 06, halaman 27 mengenai bukti kejahatan dalam format elektronik; pengayaan Panduan BSSN 2018. · Pengayaan: <a href="https://csirt.polri.go.id/storage/uploads-guidances/Panduan-Penanganan-Insiden-Serangan-Phishing.pdf" target="_blank" rel="noopener noreferrer">Panduan BSSN</a>, <a href="https://peraturan.bpk.go.id/Details/274494/uu-no-1-tahun-2024" target="_blank" rel="noopener noreferrer">UU ITE 2024</a></p>
+        <div class="subsection-conclusion"><span class="conclusion-label">KESIMPULAN SUBBAB</span><p>Korban perlu menghentikan interaksi berisiko, mengamankan akun, menghubungi penyedia layanan, dan melapor melalui saluran resmi. Bukti digital sebaiknya disimpan dalam bentuk asli beserta waktu dan kronologinya agar tidak kehilangan konteks.</p></div>
+      </div>
+    </section><section class="article-section" id="bagian-6">
+      <span class="section-index">06</span>
+      <div class="article-section-body">
+        <h2>Bukti elektronik, hukum, dan kesimpulan akhir</h2>
+        
+        <p>PDF Pertemuan 06 menegaskan bahwa semakin luas teknologi digunakan untuk komunikasi, penyimpanan, dan pengolahan informasi, semakin banyak pula bukti kejahatan yang berada dalam format elektronik atau <em>digital evidence</em>. Bukti tersebut dapat berupa dokumen, pesan, rekaman, log sistem, informasi transaksi, atau data lain yang relevan. Keberadaannya perlu dijaga agar dapat diperiksa sesuai prosedur.</p>
+        <p>UU ITE sebagaimana diubah, termasuk melalui UU Nomor 1 Tahun 2024, mengakui Informasi Elektronik dan/atau Dokumen Elektronik sebagai alat bukti hukum yang sah sesuai ketentuan yang berlaku. Pengakuan ini tidak berarti setiap tangkapan layar otomatis membuktikan seluruh tuduhan. Keaslian, konteks, keterkaitan dengan peristiwa, cara memperoleh, dan pemeriksaan oleh pihak berwenang tetap penting.</p>
+        <p>Kasus digital juga dapat bersinggungan dengan aturan lain. UU Pelindungan Data Pribadi relevan ketika terjadi pengumpulan atau penyalahgunaan data pribadi. UU Hak Cipta relevan ketika karya digital disalin atau didistribusikan tanpa memperhatikan hak pencipta. UU ITE mengatur sejumlah aspek informasi dan transaksi elektronik, termasuk perbuatan yang dilarang serta pengakuan bukti elektronik. Penentuan pasal yang tepat harus dilakukan berdasarkan fakta dan ketentuan yang berlaku, bukan hanya berdasarkan nama umum suatu kasus.</p>
+        <p>Secara keseluruhan, empat pokok materi saling terhubung. Cyberethics memberi kerangka untuk menilai tindakan; prinsip dan dimensi etika membantu mengenali hak serta tanggung jawab; perkembangan cyberspace menjelaskan mengapa dampak teknologi semakin luas; sedangkan gagasan Real Space = Cyber Space menegaskan bahwa norma tetap berlaku di internet. Pemahaman tersebut kemudian diterapkan saat mengenali dan menangani kejahatan digital.</p>
+        <div class="reference-panel"><h3>Referensi dan bacaan lanjutan</h3><ol class="reference-list">
+          <li>Materi kuliah <i>Etika di Era Teknologi Informasi</i>, PDF Pertemuan 06, 28 halaman. Pokok bahasan dan urutan materi utama.</li>
+          <li>{REFS['tavani'][0]} {link('tavani','Informasi buku')}.</li>
+          <li>{REFS['laudon'][0]}</li>
+          <li>{REFS['acm'][0]} {link('acm','Baca kode etik ACM')}.</li>
+          <li>{REFS['ite'][0]} {link('ite','Baca peraturan di JDIH BPK')}.</li>
+          <li>{REFS['pdp'][0]} {link('pdp','Baca peraturan di JDIH BPK')}.</li>
+          <li>{REFS['copyright'][0]} {link('copyright','Baca peraturan di JDIH BPK')}.</li>
+          <li>{REFS['bssn'][0]} {link('bssn','Baca panduan BSSN')}.</li>
+          <li>{REFS['case'][0]} {link('case','Baca laporan kasus')}.</li>
+        </ol><p class="reference-disclaimer">Catatan: rujukan hukum ditampilkan untuk pembelajaran. Untuk penerapan pada kasus tertentu, periksa naskah resmi dan perubahan peraturan terbaru serta mintalah pendapat pihak yang berwenang.</p></div>
+      
+        <p class="source-note">Dasar materi: PDF Pertemuan 06, halaman 27; simpulan mengintegrasikan halaman 5–27. · Pengayaan: <a href="https://peraturan.bpk.go.id/Details/274494/uu-no-1-tahun-2024" target="_blank" rel="noopener noreferrer">UU ITE 2024</a>, <a href="https://peraturan.bpk.go.id/Details/229798/uu-no-27-" target="_blank" rel="noopener noreferrer">UU PDP 2022</a>, <a href="https://peraturan.bpk.go.id/Details/38690/uu-no-28-tahun-2014" target="_blank" rel="noopener noreferrer">UU Hak Cipta 2014</a>, <a href="https://csirt.polri.go.id/storage/uploads-guidances/Panduan-Penanganan-Insiden-Serangan-Phishing.pdf" target="_blank" rel="noopener noreferrer">Panduan BSSN</a>, <a href="https://www.acm.org/code-of-ethics" target="_blank" rel="noopener noreferrer">ACM</a></p>
+        <div class="subsection-conclusion"><span class="conclusion-label">KESIMPULAN SUBBAB</span><p>Etika digital perlu diterapkan mulai dari pencegahan sampai penanganan insiden. Teknologi membawa manfaat besar, tetapi pengguna harus menjaga privasi, menghormati hak cipta, memelihara keamanan sistem, menyimpan bukti dengan benar, dan bertanggung jawab atas dampak tindakannya.</p></div>
+      </div>
+    </section></div></div>
+  <nav class="page-pagination" aria-label="Navigasi materi"><a href="real-space-cyber-space.html"><small>SEBELUMNYA</small><strong>← Real Space = Cyber Space</strong></a><a class="next-page" href="tentang-kami.html"><small>SELANJUTNYA</small><strong>Tentang Kami →</strong></a></nav>
+</main><footer class="site-footer">
+      <div class="footer-main">
+        <div class="footer-brand-block"><span class="footer-mark">ED</span><div><strong>Etika di Era Teknologi Informasi</strong><p>Media pembelajaran · Kelompok 6 · PAI 1D</p></div></div>
+        <div class="footer-campus">UIN Siber Syekh Nurjati Cirebon</div>
+        <a class="footer-about-link" href="tentang-kami.html">Tentang pengembang <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="footer-bottom"><span>© 2026 Kelompok 6. Hak cipta konten dan pengembangan website dimiliki bersama oleh kelompok.</span><span>Gunakan teknologi secara bijak dan bertanggung jawab.</span></div>
+    </footer><button class="back-to-top" id="backToTop" type="button" aria-label="Kembali ke atas" title="Kembali ke atas"><span aria-hidden="true">↑</span></button></body></html>
