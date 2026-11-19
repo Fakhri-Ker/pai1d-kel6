@@ -69,3 +69,26 @@ Setiap navigasi internal antarhalaman menampilkan skeleton loading singkat sebel
 - **Khusus HP (maksimal 620px):** subbab dipindahkan ke menu hamburger dalam bentuk accordion. Bab yang sedang dibuka otomatis menampilkan subbabnya; bab lain tertutup dan dapat dibuka manual melalui tombol panah.
 - **Desktop/laptop:** daftar subbab tetap berada di sidebar kiri seperti sebelumnya.
 - Pengaturan `prefers-reduced-motion` dihormati agar animasi tidak mengganggu pengguna yang memilih gerakan minimal.
+
+
+## Video pengenalan YouTube
+- Beranda menggunakan video YouTube dengan ID `QDia3e12czc`.
+- Video ditampilkan melalui YouTube privacy-enhanced embed (`youtube-nocookie.com`).
+- Iframe baru dimuat setelah Welcome Screen dilewati atau tombol Masuk ditekan.
+- Autoplay dicoba dalam keadaan mute karena browser umumnya membatasi autoplay dengan suara.
+- Pengunjung dapat mengaktifkan suara melalui kontrol pemutar YouTube.
+- Video tetap responsif dengan rasio 16:9 dan tidak memerlukan file MP4 di `assets/video/`.
+
+
+## Pengaturan autoplay video dengan suara (v0.8)
+- Parameter mute dihapus agar pemutar YouTube mencoba memulai dengan suara aktif.
+- Iframe dimuat setelah tombol Masuk ditekan pada Welcome Screen.
+- Browser tetap dapat membatasi autoplay bersuara. Jika diblokir, pengunjung perlu menekan tombol putar atau kontrol suara pada pemutar.
+- Pada kunjungan yang melewati Welcome Screen secara otomatis (misalnya masih dalam jangka 6 jam), browser mungkin tidak mengizinkan autoplay bersuara karena tidak ada interaksi baru.
+
+
+## Video YouTube otomatis berulang (v0.9)
+- Video mencoba autoplay setelah Welcome Screen dilewati.
+- Parameter `loop=1` dan `playlist=<ID video yang sama>` membuat satu video YouTube mengulang terus-menerus.
+- Kontrol pemutar tetap aktif agar pengunjung dapat Pause/Play dan mengatur suara.
+- Autoplay dengan suara tetap mengikuti kebijakan browser; bila diblokir, pengunjung perlu menekan Play.
