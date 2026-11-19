@@ -1,30 +1,56 @@
 (() => {
-  const video = document.getElementById('introVideo');
+  const playerContainer = document.getElementById('youtubePlayer');
   const placeholder = document.getElementById('videoPlaceholder');
-  if (!video || !placeholder) return;
+  const status = document.getElementById('videoStatus');
+  const welcome = document.getElementById('welcomeScreen');
 
-  const showPlaceholder = () => { placeholder.hidden = false; };
-  const hidePlaceholder = () => { placeholder.hidden = true; };
-  video.addEventListener('loadeddata', hidePlaceholder);
-  video.addEventListener('error', showPlaceholder);
-  video.addEventListener('emptied', showPlaceholder);
+  if (!playerContainer || !placeholder) return;
 
-  const tryPlay = (muted) => {
-    video.muted = muted;
-    const attempt = video.play();
-    if (attempt && typeof attempt.catch === 'function') {
-      attempt.catch(() => {
-        // Browser may block autoplay. Native controls remain available to the visitor.
-        showPlaceholder();
-      });
-    }
+  // ID video berasal dari tautan YouTube yang diberikan untuk website Kelompok 6.
+  const YOUTUBE_VIDEO_ID = 'QDia3e12czc';
+  let playerCreated = false;
+
+  const loadYouTubeVideo = () => {
+    if (playerCreated) return;
+    playerCreated = true;
+
+    const iframe = document.createElement('iframe');
+    const params = new URLSearchParams({
+      autoplay: '1',
+      mute: '1',
+      playsinline: '1',
+      controls: '1',
+      rel: '0',
+      modestbranding: '1'
+    });
+
+    iframe.title = 'Video pengenalan Etika di Era Teknologi Informasi';
+    iframe.src = `https://www.youtube-nocookie.com/embed/${YOUTUBE_VIDEO_ID}?${params.toString()}`;
+    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+    iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+    iframe.allowFullscreen = true;
+    iframe.loading = 'eager';
+
+    iframe.addEventListener('load', () => {
+      placeholder.hidden = true;
+      if (status) status.textContent = '';
+    });
+
+    iframe.addEventListener('error', () => {
+      placeholder.hidden = false;
+      if (status) status.textContent = 'Video tidak dapat dimuat. Periksa koneksi internet.';
+      playerCreated = false;
+    });
+
+    playerContainer.appendChild(iframe);
   };
 
-  // A returning visitor may bypass the welcome screen. Muted autoplay is used
-  // because browsers generally restrict autoplay with sound without a gesture.
-  const welcome = document.getElementById('welcomeScreen');
-  if (welcome && welcome.classList.contains('is-hidden')) tryPlay(true);
+  // Pengunjung yang masih dalam masa 6 jam melewati Welcome Screen.
+  // Video tetap dicoba diputar otomatis dalam keadaan mute.
+  if (welcome && welcome.classList.contains('is-hidden')) {
+    loadYouTubeVideo();
+  }
 
-  // A click on the welcome button is a user gesture; try to play with sound.
-  window.addEventListener('website:entered', () => tryPlay(false));
+  // Pengunjung baru memuat video setelah menekan tombol Masuk.
+  window.addEventListener('website:entered', loadYouTubeVideo);
 })();

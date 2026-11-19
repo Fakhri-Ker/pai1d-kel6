@@ -69,3 +69,12 @@ Setiap navigasi internal antarhalaman menampilkan skeleton loading singkat sebel
 - **Khusus HP (maksimal 620px):** subbab dipindahkan ke menu hamburger dalam bentuk accordion. Bab yang sedang dibuka otomatis menampilkan subbabnya; bab lain tertutup dan dapat dibuka manual melalui tombol panah.
 - **Desktop/laptop:** daftar subbab tetap berada di sidebar kiri seperti sebelumnya.
 - Pengaturan `prefers-reduced-motion` dihormati agar animasi tidak mengganggu pengguna yang memilih gerakan minimal.
+
+
+## Video pengenalan YouTube
+- Beranda menggunakan video YouTube dengan ID `QDia3e12czc`.
+- Video ditampilkan melalui YouTube privacy-enhanced embed (`youtube-nocookie.com`).
+- Iframe baru dimuat setelah Welcome Screen dilewati atau tombol Masuk ditekan.
+- Autoplay dicoba dalam keadaan mute karena browser umumnya membatasi autoplay dengan suara.
+- Pengunjung dapat mengaktifkan suara melalui kontrol pemutar YouTube.
+- Video tetap responsif dengan rasio 16:9 dan tidak memerlukan file MP4 di `assets/video/`.
