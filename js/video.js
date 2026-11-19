@@ -17,8 +17,11 @@
     const iframe = document.createElement('iframe');
     const params = new URLSearchParams({
       autoplay: '1',
+<<<<<<< HEAD
       loop: '1',
       playlist: YOUTUBE_VIDEO_ID,
+=======
+>>>>>>> fb4915bd27ae0ec711f8bcce63b0a682a6bd199e
       playsinline: '1',
       controls: '1',
       rel: '0',

@@ -85,6 +85,7 @@ Setiap navigasi internal antarhalaman menampilkan skeleton loading singkat sebel
 - Iframe dimuat setelah tombol Masuk ditekan pada Welcome Screen.
 - Browser tetap dapat membatasi autoplay bersuara. Jika diblokir, pengunjung perlu menekan tombol putar atau kontrol suara pada pemutar.
 - Pada kunjungan yang melewati Welcome Screen secara otomatis (misalnya masih dalam jangka 6 jam), browser mungkin tidak mengizinkan autoplay bersuara karena tidak ada interaksi baru.
+<<<<<<< HEAD
 
 
 ## Video YouTube otomatis berulang (v0.9)
@@ -92,3 +93,5 @@ Setiap navigasi internal antarhalaman menampilkan skeleton loading singkat sebel
 - Parameter `loop=1` dan `playlist=<ID video yang sama>` membuat satu video YouTube mengulang terus-menerus.
 - Kontrol pemutar tetap aktif agar pengunjung dapat Pause/Play dan mengatur suara.
 - Autoplay dengan suara tetap mengikuti kebijakan browser; bila diblokir, pengunjung perlu menekan Play.
+=======
+>>>>>>> fb4915bd27ae0ec711f8bcce63b0a682a6bd199e
